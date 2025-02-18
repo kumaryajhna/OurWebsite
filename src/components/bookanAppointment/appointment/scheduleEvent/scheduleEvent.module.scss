@@ -1,0 +1,74 @@
+@use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.containerSchedule {
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.headerSchedule {
+    @include mixins.flex;
+    gap: 15px;
+}
+
+.headerSchedule h5 {
+    color: variables.$third-color;
+    // font-size: $s-font;
+    font-weight: 600;
+    margin: 0;
+}
+
+.containerSchedule p {
+    color: variables.$third-color;
+    // font-size: $xs-font;
+    margin: 0;
+
+}
+
+.invitation {
+    border: 1px solid #D0D5DD;
+    border-radius: 20px;
+    // color: $third-color;
+    color: variables.$dark-color;
+    font-size: variables.$caption_font;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.scheduleDetails {
+    box-shadow: 0px 2px 9px 2px rgba(185, 192, 201, 0.2);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // width: 400px;
+}
+
+.scheduleDetails h6 {
+    color: variables.$third-color;
+    font-size: variables.$body_large_font;
+    font-weight: 600;
+    margin: 0;
+    line-height: 20px;
+}
+
+.iconNameText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.iconNameText h5 {
+    color: variables.$third-color;
+    font-size: variables.$body_font;
+    margin: 5px 0 0 0 ;
+    font-weight: 500;
+}

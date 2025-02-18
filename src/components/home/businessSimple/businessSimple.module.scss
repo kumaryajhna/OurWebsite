@@ -1,0 +1,202 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerBusiness {
+    @include mixins.flex;
+    justify-content: space-between;
+    gap: 20px;
+    // min-height: 90vh;
+    // margin-top: 60px;
+    flex-wrap: wrap;
+    padding: 0 8%;
+    margin: 50px 0px 100px 0;
+}
+
+.btnAppointment {
+    @include mixins.btn;
+    padding: 6px 18px 6px 18px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 100px;
+    justify-content: space-between;
+    margin: -40px 0 0 0;
+}
+
+.content h3 {
+    @include mixins.textLinear;
+    width: 660px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: left;
+    font-size: variables.$display_font;
+
+}
+
+.content p {
+    color: variables.$third-color;
+    width: 620px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: justify;
+    margin-top: 30px;
+    font-size: variables.$body_large_font;
+
+}
+
+
+.circleOne {
+    border: 1px solid variables.$border-color;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.circleTwo {
+    border: 1px solid variables.$border-color;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 380px;
+    height: 380px;
+    background: #F2F2F2;
+    box-shadow: -8px 12px 84px 0px #00000014;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polygon {
+    width: 330px;
+    height: 370px;
+    background-image: url('../../../assets/images/home/polygon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-10deg); // Adjust the angle as needed
+
+}
+
+.simpleImg {
+    width: 350px;
+    height: auto;
+    transform: rotate(8deg); // Adjust the angle as needed
+    // display: none;
+
+}
+
+.simpleImg2 {
+    position: absolute;
+    right: -100px;
+    top: 200px;
+    transform: rotate(10deg);
+    width: 60px;
+}
+
+.simpleImg3 {
+    position: absolute;
+    left: -120px;
+    top: 260px;
+    transform: rotate(10deg);
+    width: 90px;
+}
+
+.simpleImg4 {
+    position: absolute;
+    left: -20px;
+    top: -46px;
+    transform: rotate(10deg);
+    width: 60px;
+}
+
+.dotComp1 {
+    position: absolute;
+    top: 130px;
+    left: 52%;
+}
+
+.dotComp2 {
+    position: absolute;
+    top: -30px;
+    left: 29%;
+    z-index: -1;
+}
+.dotComp3 {
+    position: absolute;
+    top: -20px;
+    right: 60px;
+    z-index: -1;
+}
+.dotComp4 {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    z-index: -1;
+}
+.dotComp5 {
+    position: absolute;
+    top: 460px;
+    right: 210px;
+    z-index: -1;
+}
+.dotImg1{
+    width: 55px; 
+}
+// .containerBusiness {
+//     .circleOne {
+//       .circleTwo {
+//         .circle {
+//           .polygon {
+//             position: relative;
+//             width: 100%;
+//             height: 100%;
+//             animation: rotate 20s linear infinite; // Adjust duration as needed
+//             img {
+//               transition: opacity 1s ease-in-out;
+//               opacity: 1;
+//               position: absolute;
+//               width: 100px; // Adjust as needed
+//               height: 100px; // Adjust as needed
+//             }
+//             .simpleImg,
+//             .simpleImg2,
+//             .simpleImg3,
+//             .simpleImg4 {
+//               position: absolute;
+//               transition: opacity 1s ease-in-out;
+//             }
+//             .hidden {
+//               opacity: 0;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   @keyframes rotate {
+//     from {
+//       transform: rotate(0deg);
+//     }
+//     to {
+//       transform: rotate(360deg);
+//     }
+//   }

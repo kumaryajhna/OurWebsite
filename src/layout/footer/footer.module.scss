@@ -1,0 +1,250 @@
+@use '../../styles/variables.scss' as variables;
+@use '../../styles/mixins.scss' as mixins;
+
+.containerFooter {
+    display: flex;
+    flex-direction: column;
+    border-top: 1.5px solid variables.$border-color ;
+}
+
+.footerBottom {
+    @include mixins.flex;
+    justify-content: center;
+    background: linear-gradient(89.96deg, #1C98CB 0.03%, #1C98CB 49.12%, rgba(27, 20, 100, 0.8522) 100.23%);
+    gap: 50px;
+    padding: 10px;
+
+}
+
+.footerBottom p {
+    margin: 0;
+    color: variables.$common-color ;
+    font-size: variables.$body_font;
+    font-weight: 500;
+    line-height: 15px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.footerBottom button {
+    background-color: variables.$common-color;
+    border-radius: 8px;
+    font-size: variables.$body_large_font;
+    line-height: 16px;
+    padding: 10px 14px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.0);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+button small {
+    background: linear-gradient(90deg, #1C98CB, #1B1464);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    // font-size: inherit;
+    line-height: inherit;
+    // font-size: variables.$body_font;
+
+}
+
+.companyInfo {
+    padding: 25px 50px 15px 50px;
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    font-size: variables.$body_font;
+
+}
+
+.textCopyRights {
+    color: variables.$primary-color ;
+    // font-size: $xxs-font;
+    text-align: center;
+    // width: -webkit-fill-available;
+}
+
+
+
+.textCopyRights span {
+    @include mixins.textLinear
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(107.88deg, #1C98CB 32.5%, #1C83BB 52.5%, #1B1464 100%);
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+
+}
+
+.card h6 {
+    color: variables.$common-color;
+    // font-size: $xxs-font ;
+    margin: 0;
+    letter-spacing: .3px;
+
+
+}
+
+.card p {
+    color: variables.$common-color;
+    font-size:variables.$caption_font ;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: .3px;
+}
+
+.inputBtn {
+    @include mixins.flex;
+    background-color: variables.$common-color;
+    border-radius: 3px;
+    height: 38px;
+    justify-content: space-between;
+
+}
+
+.inputEmail {
+    font-size: variables.$caption_font;
+    border: 1px solid transparent;
+    height: inherit;
+    padding: 0px 5px;
+    margin: 0 0 0 3px;
+    width: inherit;
+
+    &:focus {
+        border: 1px solid transparent; // Remove border on focus
+        outline: none; // Remove default outline
+    }
+}
+
+.inputBtn button {
+    height: inherit;
+    border: 1px solid transparent;
+    background-color: variables.$secondry-color;
+    border-radius: 0 3px 3px 0;
+    font-size: variables.$caption_font;
+    color: variables.$common-color;
+    padding: 0 8px;
+    text-align: center;
+
+}
+
+.bottomImg {
+    width: 230px;
+}
+
+.imgInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.detailInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 20px;
+}
+
+.iconText {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.iconText span {
+    // font-size: $xxs-font;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: variables.$primary-color;
+    width: 194px;
+}
+
+.listNav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0 0 0
+}
+
+.listNav h6 {
+    @include mixins.textLinear;
+    margin: 0;
+    font-weight: 600;
+    font-size: variables.$body_large_font;
+
+}
+
+.listNav div {
+    display: flex;
+    flex-direction: column;
+    // font-size: $xxs-font;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: variables.$primary-color;
+    gap: 20px;
+}
+.listNav div span{
+    cursor: pointer;
+}
+
+
+.headerSocial {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.headerSocial h6 {
+    font-size: variables.$body_large_font;
+    font-weight: 600;
+    margin: 0;
+}
+
+.imagesSocialMedia {
+    @include mixins.flex;
+    gap: 25px;
+    height: 18px;
+}
+
+.imagesSocialMedia img {
+    width: 22px;
+    height: 22px;
+
+}

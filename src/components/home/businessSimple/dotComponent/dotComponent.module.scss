@@ -1,0 +1,19 @@
+/* .containerDot{
+    background-color: blueviolet;
+} */
+
+.dotGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: max-content;
+    max-width: 80px;
+
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(47, 170, 255, .9), rgb(13, 0, 91, .9));
+}

@@ -1,0 +1,60 @@
+// @import '../../../styles/variables.scss';
+// @import '../../../styles/mixins.scss';
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerOurClients {
+    display: flex;
+    margin: 70px 10px 100px 10px;
+    flex-direction: column;
+    justify-content: center
+}
+
+.containerOurClients h3 {
+    @include mixins.textLinear;
+    @include mixins.flex;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    // line-height: 40px;
+    justify-content: center;
+    margin: 0px;
+    gap: 5px;
+
+}
+
+h3 span {
+    color: variables.$third-color;
+
+}
+
+.containerOurClients p {
+    @include mixins.flex;
+    justify-content: center;
+    color: variables.$light-gray;
+    // font-size: $xs-font ;
+    font-weight: 500;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 10px 0px;
+}
+
+
+.clients div:nth-child(odd) {
+    margin-top: 40px;
+}
+
+.clients div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.clients img {
+    width: 110px;
+}

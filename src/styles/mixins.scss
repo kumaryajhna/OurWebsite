@@ -1,0 +1,39 @@
+@use './variables.scss' as variables;
+
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin btn {
+    background: linear-gradient(90deg, rgba(28, 152, 203, 0.81) 0%, #1B1464 100%);
+    box-shadow: 0px 4px 10px 0px #00000040;
+    color:variables.$common-color;
+    border-radius: 4px;
+    font-weight: 500;
+    border: none;
+    gap: 10px;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    white-space: nowrap;
+    letter-spacing: .5px;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover {
+        //   background-color: darken($secondary-color, 10%);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+        transform: scale(1.0); // Slightly enlarge the button on hover
+    }
+
+    &:active {
+        transform: scale(0.95); // Slightly shrink the button on click
+    }
+}
+
+@mixin textLinear {
+    background: linear-gradient(90.56deg, #1C98CB 0.48%, #1B1464 99.57%);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}

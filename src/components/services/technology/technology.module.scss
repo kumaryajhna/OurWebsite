@@ -1,0 +1,33 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerTechnology {
+    margin: 50px 0px;
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.containerTechnology h4{
+    // font-size: $xl-font;
+    font-weight: 600;
+    text-align: center;
+    color: variables.$third-color;
+    
+}
+.containerTechnology p{
+    // font-size: $xs-font;
+    font-weight: 500;
+    text-align: center;
+    color: variables.$light-gray;
+    width: 410px;
+    
+}
+.technologyItem{
+    @include mixins.flex;
+    margin: 50px 10px;
+
+}
+.technologyImage {
+    max-width: 70%;
+    height: auto; // Maintain aspect ratio
+  }

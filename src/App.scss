@@ -1,0 +1,15 @@
+@use './styles/variables.scss'as variables;
+
+
+
+.plogo {
+    position: fixed;
+    top: 210px;
+    width: 140px;
+    left: 0;
+}
+
+.outlet {
+    position: relative;
+    top: 85px;
+}

@@ -1,0 +1,41 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+
+
+.containerClientStories {
+    display: flex;
+    // align-items: center;
+    // margin: 30px 20px;
+    flex-direction: column;
+    justify-content: center;
+    // gap: 5px;
+}
+
+.containerClientStories h3 {
+    @include mixins.textLinear;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    text-align: center;
+    // color:variables.$brand-primary;
+}
+
+.customerRating {
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 50px 0;
+}
+
+.customerRating>p {
+    color: variables.$primary-color;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .containerClientStories h3 {
+        font-size: 1.4rem;
+    }
+}

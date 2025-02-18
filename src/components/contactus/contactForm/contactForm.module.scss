@@ -1,0 +1,107 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+
+.containerContact {
+    display: flex;
+    align-items: end;
+    padding: 30px 10%;
+    gap: 100px;
+    justify-content: space-between;
+
+}
+
+.formContact {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 600;
+    // font-size: 24px;
+    width: 400px;
+    
+    
+    h4 {
+        // font-size: $m-font; // Adjust size as needed
+        line-height: 45px;
+        color: variables.$third-color; // Example color
+        margin: 0; // Margin below the h4
+        font-weight: 600; // Bold text
+        font-size: variables.$title_font;
+
+
+        span {
+            @include mixins.textLinear;
+            font-size: variables.$title_font;
+
+
+        }
+    }
+
+}
+
+.personImg {
+    width: 560px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formControl {
+    width: 480px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid variables.$secondry-color;
+    opacity: 0.5;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: none;
+    // font-size: $xxxs-font;
+
+    // &:focus {
+    //     color: $primary-color;
+    //     border-color: $secondry-color;
+    //     outline: none;
+    //     box-shadow: 0 0 5px $primary-color;
+    // }
+
+    &::placeholder {
+        color: rgba(10, 20, 47, 1);
+        opacity: 1;
+    }
+}
+
+.formControlTextAre {
+    width: 480px;
+    height: 100px;
+    padding: 10px;
+    // font-size: $xxxs-font;
+    resize: none;
+    border: 1px solid variables.$secondry-color;
+    opacity: 0.5;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: none;
+
+    // &:focus {
+    //     color: $primary-color;
+    //     border-color: $secondry-color;
+    //     outline: none;
+    //     box-shadow: 0 0 5px $primary-color;
+    // }
+
+    &::placeholder {
+        color: rgba(10, 20, 47, 1);
+        opacity: 1;
+    }
+}
+
+.sendAppointment {
+    @include mixins.btn;
+    padding: 8px 18px 8px 18px;
+    margin-top: 10px;
+    width: 480px;
+}

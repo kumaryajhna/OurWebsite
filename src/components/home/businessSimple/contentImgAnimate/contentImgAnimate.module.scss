@@ -1,0 +1,102 @@
+@use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/mixins.scss' as mixins;
+.circleOne {
+    border: 1px solid variables.$border-color;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleTwo {
+    border: 1px solid variables.$border-color;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 380px;
+    height: 380px;
+    background: #F2F2F2;
+    box-shadow: -8px 12px 84px 0px #00000014;
+    border-radius: 50%;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polygon {
+    width: 330px;
+    height: 370px;
+    background-image: url('../../../../assets/images/home/polygon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-10deg); // Adjust the angle as needed
+
+}
+
+.simpleImg {
+    width: 350px;
+    height: auto;
+    position: absolute;
+
+}
+
+.simpleImg2 {
+    position: absolute;
+    right: 100px;
+    top: 220px;
+    width: 60px;
+}
+
+.simpleImg3 {
+    position: absolute;
+    top: 340px;
+    right: 540px;
+    width: 90px;
+}
+
+.simpleImg4 {
+    position: absolute;
+    top: -26px;
+    transform: rotate(0deg);
+    width: 60px;
+    margin: 0 0 0 -40px;
+}
+
+@keyframes rotatePolygon {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(350deg); // Rotates fully but keeps the original offset
+    }
+}
+
+.polygon {
+    width: 330px;
+    height: 370px;
+    background-image: url('../../../../assets/images/home/polygon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mixins.flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-10deg); // Initial rotation
+    animation: rotatePolygon 10s linear infinite; // Slow continuous rotation
+}
+
+
+
+

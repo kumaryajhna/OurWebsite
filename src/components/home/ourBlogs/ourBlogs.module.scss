@@ -1,0 +1,173 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerOurBlogs {
+    display: flex;
+    padding: 30px 5%;
+    flex-direction: column;
+    justify-content: center
+}
+
+.containerOurBlogs h3 {
+    @include mixins.textLinear;
+    @include mixins.flex;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+
+
+h3 span {
+    color: variables.$third-color;
+
+}
+
+.blogsRecent {
+    margin: 0px 40px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.blogs {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blogsLeft {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blogsRight {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.blogUxImg {
+    width: 650px;
+}
+
+
+.blogsLeftInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.blogItem {
+    display: flex;
+    gap: 20px;
+}
+
+.imageContainer {
+    flex: 1;
+}
+
+.blogImage {
+    width: 320px;
+    height: auto;
+}
+
+.blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blogContent h4 {
+    color: variables.$third-color;
+    font-weight: 600;
+    text-align: left;
+    margin: 2px 0;
+    font-size: variables.$body_large_font;
+}
+
+.blogContent p {
+    margin: 0;
+    font-size: variables.$body_font;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.blogContent h6 {
+    color: variables.$secondry-color;
+    font-size: variables.$caption_font;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+
+}
+
+.blogContent div {
+    margin-top: 15px;
+    @include mixins.flex;
+    gap: 10px;
+}
+
+.courceDesign {
+    color: variables.$primary-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #EEE5FD;
+    padding: 2px 8px;
+    border-radius: 11px;
+
+
+}
+
+.courceResearch {
+    color: #C11574;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FDF2FA;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courcePresentation {
+    color: variables.$secondry-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #EEF4FF;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.btnArrow {
+    margin: 50px 0px;
+    @include mixins.btn;
+    padding: 6px 25px 10px 25px
+}
+
+.buttonBlock {
+    @include mixins.flex;
+    justify-content: center;
+}
+
+.arrowText {
+    @include mixins.flex;
+    justify-content: space-between;
+    height: 30px;
+    color: variables.$third-color;
+}
+
+.textRecent {
+    color: variables.$third-color;
+    font-weight: 600;
+}

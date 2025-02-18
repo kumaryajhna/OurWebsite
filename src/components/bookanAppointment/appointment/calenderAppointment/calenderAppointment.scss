@@ -1,0 +1,222 @@
+@use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.react-calendar {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    /* Set the height for the date tiles */
+    width: 30px;
+    /* Set the width for the date tiles */
+    padding: 2px;
+    /* Set the padding for the date tiles */
+}
+
+.react-calendar__month-view__weekdays {
+    padding: 0;
+}
+
+.react-calendar__navigation {
+    padding: 0;
+    background-color: rgba(244, 244, 244, 1);
+    margin-top: 20px;
+    height: 28px;
+    // font-size: $xxs-font;
+    color: variables.$primary-color;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style for the weekday names */
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    /* Remove the underline/dots */
+    border: none;
+    /* Ensure there's no border/dots */
+    display: inline-block;
+    /* Ensure it displays inline */
+    overflow: hidden;
+    /* Hide any overflow */
+    text-align: center;
+    /* Center the text */
+    text-transform: uppercase;
+    /* Make the text uppercase */
+    // font-size: $xs-font;
+    /* Set text size (adjust as needed) */
+    color: variables.$secondry-color;
+    font-weight: 500;
+    /* Set font weight for weekday names */
+}
+
+/* Color for dates in the current month */
+.react-calendar__tile {
+    color: variables.$third-color;
+    font-weight: 500;
+    // font-size: $xxxxs-font;
+    // width: 10px !important;
+    // height: 30px;
+    // // flex:0 0 6% ;
+    // overflow: hidden;
+    // margin-inline-end: 0px;
+    // padding: 8px 8px;
+    // /* Default color for dates */
+}
+
+.react-calendar__tile--active {
+    background: variables.$secondry-color !important;
+    border-radius: 5px;
+    color: variables.$common-color;
+    padding: 0;
+    font-weight: 400;
+    // font-size: $xxs-font;
+}
+
+.react-calendar__tile--now {
+    background: variables.$secondry-color !important;
+    /* Background color for the current date */
+    color: variables.$common-color !important;
+    /* Text color for the current date */
+    font-weight: 400;
+    /* Optional: Make current date bold */
+    // font-size: $xxs-font;
+    border-radius: 5px;
+
+    /* Text size for the current date */
+}
+
+/* Optional: Different color for dates not in the current month */
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: rgba(109, 176, 255, 0.5);
+    font-weight: 500;
+    // font-size: $xxxs-font;
+    /* Color for dates in neighboring months */
+}
+
+/* Style for the month names */
+.react-calendar__navigation__label {
+    font-weight: 700;
+    // font-size: $m-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$primary-color !important;
+    padding: 5px;
+}
+
+/* Style for the navigation arrows */
+.react-calendar__navigation__arrow {
+    color: variables.$primary-color;
+    // font-size: $xxxl-font;
+    padding: 5px;
+}
+
+.react-calendar__tile:hover {
+    background: rgba(0, 0, 0, 0.1);
+    /* Change to the desired hover background color */
+    border-radius: 5px;
+    height: 30px;
+
+    /* Optional: Keep the border-radius consistent with other states */
+}
+
+.react-calendar__navigation button {
+    min-width: 44px;
+    background: none;
+}
+
+button span {
+    color: variables.$primary-color;
+    font-weight: 600;
+    // font-size: $s-font;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    /* Remove the underline/dots */
+    border: none;
+    /* Ensure there's no border/dots */
+    display: inline-block;
+    /* Ensure it displays inline */
+    overflow: hidden;
+    /* Hide any overflow */
+    text-align: center;
+    /* Center the text */
+    text-transform: uppercase;
+    /* Make the text uppercase */
+    // font-size: $xs-font; /* Set text size (adjust as needed) */
+    color: variables.$secondry-color;
+    font-weight: 500;
+    /* Set font weight for weekday names */
+
+    &::first-letter {
+        font-size: inherit;
+        /* Use the same font size */
+        font-weight: inherit;
+        /* Use the same font weight */
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        /* Hide the remaining text */
+        overflow: hidden;
+        /* Hide any overflow */
+    }
+}
+
+.react-calendar__navigation {
+    padding: 0;
+    background-color: rgb(244, 244, 244);
+    margin-top: 20px;
+    height: 38px;
+    color: #1b1464;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+    background-color: #e6e6e6;
+    height: 38px;
+}
+
+
+.react-calendar__navigation__arrow {
+    color: #1b1464;
+    padding: 5px;
+    font-size: 25px;
+}
+
+button span {
+    color: #1b1464;
+    font-weight: 600;
+    font-size: 14px;
+}
+.react-calendar {
+    &__month-view__days {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 0px;
+    }
+  }
+  
+
+  .react-calendar {
+    &__month-view__weekdays {
+      text-transform: uppercase; // Ensure uppercase letters
+      font-weight: bold;
+      text-align: center;
+    }
+  }

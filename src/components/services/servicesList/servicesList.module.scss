@@ -1,0 +1,86 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+// .containerServicesList {
+//     @include mixins.flex;
+//     justify-content: center;
+//     flex-direction: column;
+// }
+
+.containerServicesList {
+    display: flex;
+    margin: 20px 40px 20px 40px;
+    flex-direction: column;
+    justify-content: center;
+    // border: 1px solid;
+    align-items: center;
+    gap: 50px;
+}
+
+.containerServicesList h3 {
+    @include mixins.textLinear;
+    @include mixins.flex;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    justify-content: center;
+    margin: 0px 0px 10px 0;
+    gap: 5px;
+
+}
+
+
+
+h3 span {
+    color: variables.$third-color;
+
+}
+
+
+
+.even {
+    @include mixins.flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+.odd {
+    @include mixins.flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 60px;
+
+}
+
+
+
+.contentInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    gap: 10px;
+}
+
+.contentInfo h4 {
+    color: variables.$third-color;
+    font-size: variables.$title_font;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    margin: 0;
+}
+
+.contentInfo p {
+    color: variables.$third-color;
+    line-height: 25px;
+    text-align: left;
+    margin: 0;
+    display: flex;
+}
+
+
+.serviceImage {
+    width: 400px;
+    height: auto;
+}

@@ -1,0 +1,61 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerOurMission {
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px 10px 100px 10px;
+
+    span:nth-child(odd) {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(90deg, #1C98CB 0%, #1B1464 100%);
+        border-radius: 50%;
+        @include mixins.flex;
+        justify-content: center;
+        color: variables.$common-color;
+        font-size: variables.$caption_font;
+        letter-spacing: 1px;
+
+
+    }
+
+    span:nth-child(even) {
+        width: 2px; // Set a narrow width to represent a line
+        height: 180px; // Adjust height as needed for the line
+        margin: 0 auto; // Center the line horizontally
+        border-left: 2px dashed variables.$light-gray; // Border to give the appearance of a line
+    }
+}
+
+.ourMission {
+    position: absolute;
+    top: 30px;
+    margin: 0 0 0 -540px;
+    box-shadow: -1px 5px 20px 4px #0000001A;
+    background-color: variables.$common-color;
+    padding: 15px;
+    max-width: 420px;
+    border-radius: 5px;
+    color: variables.$third-color;
+    font-size: variables.$body_font;
+    letter-spacing: .5px;
+
+}
+
+.ourVision {
+    position: absolute;
+    top: 270px;
+    margin: 0 0 0 540px;
+    box-shadow: -1px 5px 20px 4px #0000001A;
+    background-color: variables.$common-color;
+    padding: 15px;
+    max-width: 420px;
+    border-radius: 5px;
+    color: variables.$third-color;
+    font-size: variables.$body_font;
+    letter-spacing: .5px;
+
+
+}

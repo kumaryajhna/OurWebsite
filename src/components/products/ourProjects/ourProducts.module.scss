@@ -1,0 +1,149 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+
+.containerProducts {
+    display: flex;
+    align-items: center;
+    margin: 10px 10px 0 10px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.containerProducts h3 {
+    @include mixins.textLinear;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    text-align: left;
+
+}
+
+h3 span {
+    color: variables.$third-color;
+}
+
+.productsMap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.evenProducts {
+    // @include mixins.flex;
+    display: flex;
+    align-self: start;
+    flex-direction: row;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    gap: 50px;
+}
+
+
+.oddProducts {
+    display: flex;
+    align-self: start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    gap: 50px;
+
+}
+
+
+
+.contentInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 335px;
+    gap: 120px;
+    // justify-content: space-between;
+}
+
+.contentInfoTop {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contentInfo h4 {
+    color: variables.$third-color;
+    font-size: variables.$title_font;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px; // Adjust as needed
+        height: 1.3px; // Adjust as needed
+        width: 0; // Initial width set to 0
+        background: linear-gradient(90deg, #1C98CB -0.16%, #1B1464 99.84%);
+        animation: increaseDecrease 2s infinite ease-in-out; // Apply animation
+    }
+}
+
+@keyframes increaseDecrease {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+
+
+.contentInfo h6 {
+    color: variables.$secondry-color;
+    // font-size: $s-font;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin: 0 0 10px 0;
+}
+
+.contentInfo p {
+    color: variables.$third-color;
+    // font-size: $xs-font;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin: 0;
+    display: flex;
+
+}
+
+
+.itemImage {
+    // width: 600px;
+    width: auto;
+    height: auto;
+}
+
+.iconDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 10px;
+}
+
+.btnDemo {
+
+    padding: 6px 15px 6px 15px;
+    // font-size: $xxxs-font ;
+    margin: 0 0 50px 0px;
+    @include mixins.btn;
+    width: fit-content;
+    box-shadow: none;
+}

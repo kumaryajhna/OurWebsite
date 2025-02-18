@@ -1,0 +1,95 @@
+@use '../../../../styles/variables.scss'as variables;
+@use '../../../../styles/mixins.scss' as mixins;
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-item {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding: 30px 5%;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 570px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-header {
+    font-size: variables.$slide_title;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.product-description { 
+    font-size:variables.$body-font;
+    line-height: 35px;
+    margin: 20px 0 20px 0;
+    width: 370px;
+}
+
+.product-button {
+  
+    padding: 6px 15px 6px 15px;
+    margin-top: 50px;
+    @include mixins.btn;
+    // box-shadow: none;
+}
+
+
+/* Customize the dots */
+.slick-dots {
+    bottom: 10px;
+    /* Position the dots from the bottom */
+    display: flex !important;
+    justify-content: center;
+}
+
+.slick-dots li {
+    margin: 0 4px;
+    /* Adjust spacing between dots */
+}
+
+.slick-dots li button {
+    // font-size: 0;
+    /* Hide the default button text */
+    width: 12px;
+    /* Increase the size of the dot */
+    height: 12px;
+    padding: 0;
+}
+
+.slick-dots li button:before {
+    font-size: 15px;
+    color: #d6b1b1;
+    content: '•';
+}
+
+.slick-dots li.slick-active button:before {
+    color: transparent;
+    /* Make the text transparent */
+    background: linear-gradient(90deg, #1C98CB -3.33%, #1B1464 100%);
+    -webkit-background-clip: text;
+    /* Use the background as the text color */
+    background-clip: text;
+}
+
+.slick-dots li button:hover:before {
+    color: transparent;
+    /* Make the text transparent */
+    background: linear-gradient(90deg, #1C98CB -3.33%, #1B1464 100%);
+    -webkit-background-clip: text;
+    /* Use the background as the text color */
+    background-clip: text;
+}

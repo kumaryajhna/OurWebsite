@@ -1,0 +1,67 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerValues {
+    @include mixins.flex;
+    margin: 30px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px
+}
+
+.containerValues h3 {
+    @include mixins.textLinear;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    text-align: left;
+    margin: 0;
+
+}
+
+h3 span {
+    color: variables.$third-color;
+}
+
+.coreValuesMap {
+    display: flex;
+    // align-items: self-start;
+    // justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.coreValueItem {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.coreValueItem img {
+    width: 30px;
+    height: 30px;
+
+}
+
+.coreValueItem h3 {
+    color: variables.$third-color;
+    font-weight: 500;
+    font-size: variables.$title_font ;
+
+}
+
+.coreValueItem p {
+    font-weight: 400;
+    // color: variables.$light-gray;
+    // font-size: $xxs-font ;
+    color: #707070;
+    font-size: variables.$body_font;
+}
+
+.coreValues {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

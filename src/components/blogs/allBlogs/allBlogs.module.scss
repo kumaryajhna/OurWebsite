@@ -1,0 +1,240 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerAllBolgs {
+    // @include mixins.flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 40px 20px 60px;
+    padding: 0 5%;
+    gap: 15px;
+
+}
+
+.textRecent {
+    // font-size: $s-font;
+    // color: variables.$third-color;
+    // font-weight: 600;
+    // margin-bottom: 20px;
+    color: variables.$third-color;
+    font-weight: 600;
+}
+
+.blogItem {
+    // display: flex;
+    // gap: 15px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    width: 350px;
+}
+
+
+.blogImage {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blogContent h4 {
+    // color: #14142b;
+    // font-size: 0.875em;
+    // font-weight: 600;
+    // line-height: 16px;
+    // text-align: left;
+    // margin: 2px 0;
+    // max-width: 265px;
+    color: variables.$third-color;
+    font-weight: 600;
+    text-align: left;
+    margin: 2px 0;
+    font-size: variables.$body_large_font;
+}
+
+.blogContent p {
+    // margin: 0;
+    // // font-size: $xxxs-font;
+    // font-weight: 400;
+    // text-align: left;
+    // max-width: 265px;
+    margin: 0;
+    font-size: variables.$body_font;
+    font-weight: 400;
+    text-align: left;
+
+}
+
+.blogContent h6 {
+    // color: variables.$secondry-color;
+    // // font-size: $xxxs-font;
+    // font-weight: 600;
+    // text-align: left;
+    // margin: 0;
+
+    color: variables.$secondry-color;
+    font-size: variables.$caption_font;
+    font-weight: 600;
+    text-align: left;
+    margin: 0;
+
+}
+
+.AllBlogsInfo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.arrowText {
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+    color: variables.$third-color;
+}
+
+.blogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.courceInfo {
+    @include mixins.flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.courceResearch {
+    color: #C11574;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FDF2FA;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courcePresentation {
+    color: variables.$secondry-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #EEF4FF;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceDesign {
+    // color: variables.$primary-color;
+    //     font-size: variables.$caption_font;
+    // font-weight: 500;
+    // text-align: center;
+    // background-color: #EEE5FD;
+    // padding: 2px 8px;
+    // border-radius: 11px;
+    color: variables.$primary-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #EEE5FD;
+    padding: 2px 8px;
+    border-radius: 11px;
+
+
+}
+
+.courceLeadership {
+    color: variables.$purple-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #F9F5FF;
+    padding: 2px 8px;
+    border-radius: 11px;
+
+
+}
+
+.courceManagement {
+    color: variables.$darkBlue-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #F8F9FC;
+    padding: 2px 8px;
+    border-radius: 11px;
+
+
+}
+
+.courceProduct {
+    color: variables.$bahamaBlue-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #F0F9FF;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceFrameworks {
+    color: variables.$reddishBrown-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FFF6ED;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceDevelopment {
+    color: variables.$vibrantGreen-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #ECFDF3;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceTools {
+    color: variables.$pink-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FDF2FA;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceSaas {
+    color: variables.$pinkishRed-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #FFF1F3;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courcePodcasts {
+    color: variables.$mediumDarkPurple-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #F9F5FF;
+    padding: 2px 8px;
+    border-radius: 11px;
+}
+
+.courceCustomer {
+    color: variables.$grayishBlue-color;
+    font-size: variables.$caption_font;
+    font-weight: 500;
+    text-align: center;
+    background-color: #F8F9FC;
+    padding: 2px 8px;
+    border-radius: 11px;
+}

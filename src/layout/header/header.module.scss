@@ -1,0 +1,55 @@
+@use '../../styles/variables' as variables;
+@use '../../styles/mixins' as mixins;
+
+.containerHeader {
+    @include mixins.flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color:variables.$common-color ;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 999;
+    top: 0;
+    // border-bottom: 1px solid #faf3f3;
+
+}
+
+.imgLogo {
+    width: 250px;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: variables.$third-color;
+    // font-size: variables.$body_font;
+    font-size: 17px;
+    color: variables.$third-color;
+    font-weight: 500;
+}
+
+.link:hover {
+    @include mixins.textLinear;
+    text-decoration: none;
+    // font-size: variables.$body_font;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.active {
+    @include mixins.textLinear;
+    text-decoration: none;
+    // font-size: variables.$body_font ;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.headerRight {
+    @include mixins.flex;
+    gap: 40px;
+}
+
+.btnContactUs {
+    @include mixins.btn;
+    padding: 6px 20px;
+}

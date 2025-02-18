@@ -1,0 +1,81 @@
+@use '../../../../styles/variables.scss' as variables;
+@use '../../../../styles/mixins.scss' as mixins;
+
+.slider-container2 {
+  margin: 0 auto; // Center the container on the screen
+  width: 80%;
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+    padding: 20px;
+  }
+
+  .slick-center .slide-content {
+    transform: scale(1.1); // Slightly enlarge the center slide
+    filter: none;
+    opacity: 1;
+    width: 300px;
+  }
+
+  .slick-slide:not(.slick-center) .slide-content {
+    transform: scale(0.9); // Scale down the non-center slides
+    filter: blur(3px); // Apply a slight blur
+    opacity: 0.7; // Reduce opacity of non-center slides
+  }
+
+  .slide {
+    width: 300px; // Set the width of each slide to 300px
+    text-align: center;
+  }
+
+  .slide-content {
+    background-color: #fff;
+    padding: 25px 20px 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 21px 2px rgba(28, 152, 203, 0.201961);
+
+    transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease;
+    width: 100%;
+  }
+
+  .slide-content h4 {
+    color: variables.$third-color;
+    // font-size: $xs-font;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+  }
+
+  .slide-content p {
+    color: variables.$third-color;
+    // font-size: $xxxs-font;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+
+  }
+
+
+
+  .quote {
+    margin: -5PX 0 0 0;
+  }
+
+  strong {
+    color: variables.$secondry-color ;
+    font-weight: 500;
+    // font-size: $xs-font ;
+  }
+
+  .rateStar {
+    @include mixins.flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 5px;
+  }
+}
