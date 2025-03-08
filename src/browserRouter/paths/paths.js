@@ -7,4 +7,11 @@ export const Paths = {
     Contactus:'/contactus',
     BookanAppointment:'/bookanAppointment',
 
+
+    SoftwareDominates:"/blog/softwareDominates",
+    SoftwareDevelopment:"/blog/softwareDevelopment",
+    AiAutomation:"/blog/aiAutomation",
+
+
+
 }

@@ -17,10 +17,7 @@ const ContactForm = () => {
                         <input type="text" placeholder="Phone Number" className={`form-control ${Styles.formControl}`} />
                         <input type="text" placeholder="Subject" className={`form-control ${Styles.formControl}`} />
                         <textarea type="text" placeholder="Message" className={`form-control ${Styles.formControlTextAre}`} />
-
                         <button className={Styles.sendAppointment}>Send Request</button>
-
-
                     </div>
                 </div>
                 <div>

@@ -1,0 +1,83 @@
+@use '../../../styles/variables' as variables;
+@use '../../../styles/mixins' as mixins;
+
+.containerSideDrawer {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerSideDrawer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:  15px;
+    border-bottom: 1px solid #efefef;
+}
+.btnContactUs {
+    @include mixins.btn;
+    padding: 6px 20px;
+    width: fit-content;
+    margin: 20px auto;
+}
+.headerSideDrawer>h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    @include mixins.textLinear
+}
+
+.headerRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    // color: #AB1E0C;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #efefef;
+
+}
+
+.active {
+    background: linear-gradient(90.56deg, #1C98CB 0.48%, #1B1464 99.57%);
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #efefef;
+    color: #fff;
+
+}
+
+.link:hover {
+    text-decoration: none;
+    background: linear-gradient(90.56deg, #1C98CB 0.48%, #1B1464 99.57%);
+    padding: 8px 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #efefef;
+    color: #fff;
+
+}
+
+.iconClose {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+    .active,
+    .link:hover,
+    .link {
+        font-size: 14px;
+    }
+
+    .headerSideDrawer>h3 {
+        font-size: 16px;
+    }
+
+    .iconClose {
+        font-size: 20px;
+    }
+}

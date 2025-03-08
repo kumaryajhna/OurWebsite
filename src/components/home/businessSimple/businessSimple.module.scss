@@ -4,26 +4,33 @@
 .containerBusiness {
     @include mixins.flex;
     justify-content: space-between;
-    gap: 20px;
-    // min-height: 90vh;
-    // margin-top: 60px;
-    flex-wrap: wrap;
-    padding: 0 8%;
-    margin: 50px 0px 100px 0;
+    gap: 100px;
+    // flex-wrap: wrap;
+    padding: 70px ;
+    width: 1500px;
+    position: relative;
+    margin: 15px 0 0 0;
+
 }
 
 .btnAppointment {
     @include mixins.btn;
-    padding: 6px 18px 6px 18px;
+    padding: 10px 20px;
+}
+.btnAppointmentMobile {
+    @include mixins.btn;
+    padding: 10px 20px;
+    display: none;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 100px;
+    gap: 50px;
     justify-content: space-between;
-    margin: -40px 0 0 0;
+    margin: -50px 0 0 0;
+    // margin: 0px 0 0 0;
 }
 
 .content h3 {
@@ -33,6 +40,8 @@
     letter-spacing: 0.05em;
     text-align: left;
     font-size: variables.$display_font;
+    line-height: 60px;
+
 
 }
 
@@ -43,160 +52,215 @@
     letter-spacing: 1px;
     line-height: 40px;
     text-align: justify;
-    margin-top: 30px;
+    margin: 30px 0 40px 0;
     font-size: variables.$body_large_font;
 
 }
 
-
-.circleOne {
-    border: 1px solid variables.$border-color;
-    width: 480px;
-    height: 480px;
-    border-radius: 50%;
-    @include mixins.flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
-
-.circleTwo {
-    border: 1px solid variables.$border-color;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    @include mixins.flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle {
-    width: 380px;
-    height: 380px;
-    background: #F2F2F2;
-    box-shadow: -8px 12px 84px 0px #00000014;
-    border-radius: 50%;
-    @include mixins.flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.polygon {
-    width: 330px;
-    height: 370px;
-    background-image: url('../../../assets/images/home/polygon.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @include mixins.flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-10deg); // Adjust the angle as needed
-
-}
-
-.simpleImg {
-    width: 350px;
-    height: auto;
-    transform: rotate(8deg); // Adjust the angle as needed
-    // display: none;
-
-}
-
-.simpleImg2 {
-    position: absolute;
-    right: -100px;
-    top: 200px;
-    transform: rotate(10deg);
-    width: 60px;
-}
-
-.simpleImg3 {
-    position: absolute;
-    left: -120px;
-    top: 260px;
-    transform: rotate(10deg);
-    width: 90px;
-}
-
-.simpleImg4 {
-    position: absolute;
-    left: -20px;
-    top: -46px;
-    transform: rotate(10deg);
-    width: 60px;
-}
-
-.dotComp1 {
-    position: absolute;
-    top: 130px;
-    left: 52%;
-}
+// .dotComp1 {
+//     position: absolute;
+//     top: 170px;
+//     left: 52%;
+// }
 
 .dotComp2 {
     position: absolute;
-    top: -30px;
-    left: 29%;
+    top: 35px;
+    left: 340px;
     z-index: -1;
 }
-.dotComp3 {
-    position: absolute;
-    top: -20px;
-    right: 60px;
-    z-index: -1;
-}
-.dotComp4 {
-    position: absolute;
-    top: 150px;
-    right: 150px;
-    z-index: -1;
-}
-.dotComp5 {
-    position: absolute;
-    top: 460px;
-    right: 210px;
-    z-index: -1;
-}
-.dotImg1{
-    width: 55px; 
-}
-// .containerBusiness {
-//     .circleOne {
-//       .circleTwo {
-//         .circle {
-//           .polygon {
-//             position: relative;
-//             width: 100%;
-//             height: 100%;
-//             animation: rotate 20s linear infinite; // Adjust duration as needed
-//             img {
-//               transition: opacity 1s ease-in-out;
-//               opacity: 1;
-//               position: absolute;
-//               width: 100px; // Adjust as needed
-//               height: 100px; // Adjust as needed
-//             }
-//             .simpleImg,
-//             .simpleImg2,
-//             .simpleImg3,
-//             .simpleImg4 {
-//               position: absolute;
-//               transition: opacity 1s ease-in-out;
-//             }
-//             .hidden {
-//               opacity: 0;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
 
-//   @keyframes rotate {
-//     from {
-//       transform: rotate(0deg);
-//     }
-//     to {
-//       transform: rotate(360deg);
-//     }
-//   }
+.cursor {
+    font-size: 14px;
+}
+
+// .dotComp3 {
+//     position: absolute;
+//     top: 50px;
+//     right: 100px;
+//     z-index: -1;
+// }
+
+// .dotComp4 {
+//     position: absolute;
+//     top: 130px;
+//     right: 120px;
+//     z-index: -1;
+// }
+
+// .dotComp5 {
+//     position: absolute;
+//     top: 530px;
+//     right: 240px;
+//     z-index: -1;
+// }
+
+
+.dotImg1 {
+    width: 55px;
+}
+
+
+.statementText {
+    @include mixins.textLinear;
+    font-weight: 600;
+    font-size: 20px;
+    // line-height: 30px;
+    background: linear-gradient(90.56deg, #1C98CB 0.48%, #1B1464 99.57%);
+    -webkit-background-clip: text;
+    color: transparent;
+    // font-family: "Special Elite", serif;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    height: 60px;
+    // display: flex;
+
+    display: inline-block;
+    width: 100%; // Takes full width of the container
+    word-wrap: break-word; // Break long words if needed
+    white-space: normal; // Allows text to wrap to the next line
+}
+
+.animatedCube {
+    position: absolute;
+    top: 76%;
+    left: 45%;
+
+}
+
+@media (max-width: 1500px) {
+    .containerBusiness {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .dotComp2 {
+        display: none;
+    }
+
+    .content h3 {
+        width: 530px;
+        font-size: 40px;
+
+    }
+
+    .content p {
+        width: 530px;
+        // font-size: 20px;
+    }
+
+    .statementText {
+        width: 530px;
+        height: 60px;
+    }
+
+    .animatedCube {
+        top: 80%;
+        left: 35%;
+
+    }
+
+
+}
+
+@media (max-width: 1200px) {
+    .containerBusiness {
+        padding: 70px 50px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .containerBusiness {
+        flex-direction: column;
+        gap: 100px;
+        padding:20px  30px;
+
+    }
+
+    .content {
+        margin: 0px 0 0 0;
+    }
+
+    .content h3 {
+        width: auto;
+        font-size: 36px;
+        margin: 0;
+        line-height: 50px;
+
+    }
+
+    .content p {
+        width: auto;
+        // font-size: 20px;
+    }
+
+    .statementText {
+        width: auto;
+        height: 60px;
+    }
+
+    .animatedCube {
+        top: 40%;
+        left: 55%;
+
+    }
+    .btnAppointment {
+        @include mixins.btn;
+        padding: 10px 20px;
+        display: none
+    }
+    .btnAppointmentMobile {
+        @include mixins.btn;
+        padding: 10px 20px;
+        display: block;
+    }
+}
+@media (max-width: 550px) {
+    .content h3 {
+        width: auto;
+        font-size: 28px;
+        margin: 0;
+        line-height: 40px;
+
+    }
+    .animatedCube {
+        top: 45%;
+        left: 60%;
+
+    }
+    .containerBusiness {
+        padding:0px 20px;
+
+    }
+    .content p {
+        // width: auto;
+        font-size: 17px;
+        margin: 25px 0;
+        line-height: 32px;
+        text-align: left;
+    }
+    .statementText {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content h3 {
+        width: auto;
+        font-size: 24px;
+        margin: 0;
+        line-height: 40px;
+    }
+    .animatedCube {
+        top: 45%;
+        left: 70%;
+
+    }
+    .statementText {
+        width: auto;
+        height: 80px;
+    }
+
+}

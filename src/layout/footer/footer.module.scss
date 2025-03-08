@@ -12,7 +12,7 @@
     justify-content: center;
     background: linear-gradient(89.96deg, #1C98CB 0.03%, #1C98CB 49.12%, rgba(27, 20, 100, 0.8522) 100.23%);
     gap: 50px;
-    padding: 10px;
+    padding: 3px;
 
 }
 
@@ -66,7 +66,7 @@ button small {
     @include mixins.flex;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
     font-size: variables.$body_font;
 
 }
@@ -88,6 +88,8 @@ button small {
     display: flex;
     justify-content: space-between;
     width: -webkit-fill-available;
+    max-width: 1350px;
+    gap: 30px 20px;
 
 }
 
@@ -121,10 +123,11 @@ button small {
 
 .card p {
     color: variables.$common-color;
-    font-size:variables.$caption_font ;
+    font-size: variables.$caption_font ;
     margin: 0;
     font-weight: 400;
     letter-spacing: .3px;
+    text-align: center;
 }
 
 .inputBtn {
@@ -142,7 +145,8 @@ button small {
     height: inherit;
     padding: 0px 5px;
     margin: 0 0 0 3px;
-    width: inherit;
+    // width: -webkit-fill-available;
+    width: 210px;
 
     &:focus {
         border: 1px solid transparent; // Remove border on focus
@@ -220,7 +224,8 @@ button small {
     color: variables.$primary-color;
     gap: 20px;
 }
-.listNav div span{
+
+.listNav div span {
     cursor: pointer;
 }
 
@@ -247,4 +252,89 @@ button small {
     width: 22px;
     height: 22px;
 
+}
+
+@media (max-width: 1200px) {
+    .companyInfo {
+        padding: 25px 30px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .companyInfo {
+        padding: 25px 20px 25px 20px;
+    }
+
+    .footerTop {
+        flex-wrap: wrap;
+        // justify-content: center;
+    }
+
+    .bottomImg {
+        width: 180px;
+    }
+
+    .detailInfo {
+        margin: 0;
+    }
+
+    .cardInfo {
+        // align-items: center;
+        width: -webkit-fill-available;
+    }
+}
+
+@media (max-width: 550px) {
+    .footerTop {
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    .bottomImg {
+        width: 160px;
+    }
+
+    .iconText span {
+        font-size: 15px;
+    }
+
+    .listNav div {
+        font-size: 15px;
+        gap: 15px;
+    }
+
+    .listNav {
+        margin: 0 0 0 30px;
+    }
+    .cardInfo {
+        margin: 0 0 0 30px;
+    }
+    .textCopyRights{
+        font-family: 15px;
+    }
+    .headerSocial{
+        font-size: 15px;
+    }
+    .imagesSocialMedia img {
+        width: 20px;
+        height: 20px;
+    }
+    .listNav h6 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .listNav {
+        margin: 0 0 0 0px;
+    }
+    .cardInfo {
+        margin: 0 0 0 0px;
+    } 
+    .footerTop {
+        margin-left: 0px;
+    }
+    .companyInfo {
+        padding: 25px 10px;
+    }
 }

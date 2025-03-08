@@ -1,0 +1,54 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+
+.containerHomeAbout {
+    display: flex;
+    // padding: 30px 80px;
+    padding: 30px 80px 30px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+
+}
+
+.containerHomeAbout h3 {
+    @include mixins.textLinear;
+    @include mixins.flex;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    justify-content: center;
+    gap: 5px;
+    margin: 40px 0 0px 0;
+
+}
+
+.btnArrow {
+    margin: 20px 0px;
+    @include mixins.btn;
+    // padding: 5px 18px 5px 18px;
+    padding: 6px 25px 10px 25px;
+    width: auto;
+}
+
+@media (max-width: 1200px) {
+    .containerHomeAbout {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .containerBusiness {
+        padding: 20px 30px;
+
+    }
+}
+
+@media (max-width: 450px) {
+
+    .containerHomeAbout h3 {
+        font-size: 28px;
+    }
+
+}

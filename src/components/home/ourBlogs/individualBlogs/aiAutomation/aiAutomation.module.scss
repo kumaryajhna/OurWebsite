@@ -1,0 +1,249 @@
+@use '../../../../../styles/variables.scss' as variables;
+@use '../../../../../styles/mixins.scss' as mixins;
+
+.containerSoftwareDominatesMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerSoftwareDominates {
+    // background-color: antiquewhite;
+    max-width: 1500px;
+    padding: 20px 80px;
+}
+
+.containerSoftwareDominates h2 {
+    color: variables.$primary-color;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.containerSoftwareDominates h6 {
+    color: variables.$secondry-color;
+    font-weight: 500;
+    font-size: variables.$body_font;
+}
+
+
+
+.mainImg {
+    width: 100%; // Ensures the image takes the full container width
+    max-width: 100%; // Prevents the image from exceeding its container
+    height: auto; // Maintains aspect ratio
+    margin-bottom: 20px;
+}
+
+
+
+.containerSoftwareDominates div>b {
+    padding-bottom: 20px;
+    color: variables.$secondry-color;
+    font-weight: 600;
+
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.containerSoftwareDominates p {
+    line-height: 30px;
+    color: variables.$third-color;
+    margin-bottom: 30px;
+}
+
+.blogImg {
+    width: 20px;
+    margin: -2px 10px 0 0px;
+}
+
+.points {
+    color: variables.$primary-color !important;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px !important;
+}
+
+.dottedLine {
+    border-top: 1px dashed #AAAFB1;
+    margin: 30px 0 0 0 !important
+}
+
+.softwareDominatesTable {
+    margin-bottom: 30px;
+    border: 1px solid #AAAFB1;
+    max-width: fit-content;
+    border-radius: 10px;
+}
+
+.softwareDominatesTable>table>thead>tr>th {
+    border: 1px solid #AAAFB1;
+    border-top: none;
+    border-right: none;
+    padding: 10px 10px 10px 15px;
+    color: variables.$primary-color;
+    font-weight: 600;
+    font-size: variables.$body_font;
+}
+
+.blinkingListDev{
+    margin-left: -10px;
+    margin-bottom: 40px;
+}
+.blinkingDotDev {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    margin: 0;
+    min-width: 270px;
+    margin-bottom: 12px;
+}
+
+.blinkingDotDev::before {
+    padding-left: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transform: translateY(-50%) scale(1);
+    /* background-color: black; */
+    background: linear-gradient(90deg, rgba(28, 152, 203, 0.81) 0%, #1B1464 100%);
+
+    animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+.blinkingDotDev:nth-child(odd)::before {
+    animation-delay: 0.2s;
+}
+
+.blinkingDotDev:nth-child(3n)::before {
+    animation-delay: 0.4s;
+}
+
+.blinkingDotDev:nth-child(4n)::before {
+    animation-delay: 0.6s;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.4);
+    }
+}
+
+.softwareDominatesTable>table>thead>tr>th:first-child {
+    border-left: none;
+}
+
+.softwareDominatesTable>table>tbody>tr>td {
+    border: 1px solid #AAAFB1;
+    border-right: none;
+    padding: 10px 10px 10px 15px;
+    font-size: variables.$body_font;
+
+
+}
+
+.softwareDominatesTable>table>tbody>tr>td:first-child {
+    border-left: none;
+    border-bottom: none
+}
+
+.softwareDominatesTable>table>tbody>tr>td:nth-child(2) {
+    border-bottom: none
+}
+
+.softwareDominatesTable>table>tbody>tr>td:nth-child(3) {
+    border-bottom: none
+}
+
+
+
+
+.btnAppointmentMobile {
+    @include mixins.btn;
+    padding: 10px 20px;
+    display: none;
+}
+
+.containerSoftwareDominates h3 {
+    @include mixins.textLinear;
+    margin: 50px 0;
+    font-size: variables.$body_large_font;
+    line-height: 30px
+}
+
+.buttonSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0
+}
+
+.btnAppointment {
+    @include mixins.btn;
+    padding: 10px 20px;
+}
+
+@media (max-width: 1200px) {
+
+    .containerSoftwareDominates {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .btnAppointment {
+        display: none
+    }
+
+    .btnAppointmentMobile {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .containerSoftwareDominates {
+        padding: 10px 15px 20px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .softwareDominatesTable>table>thead>tr>th {
+        padding: 8px;
+
+    }
+
+    .softwareDominatesTable>table>tbody>tr>td {
+        padding: 8px;
+    }
+
+    .containerSoftwareDominates h2 {
+        font-size: 22px;
+        letter-spacing: .5px;
+    }
+
+    .containerSoftwareDominates h3 {
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    ._containerSoftwareDominates_70sq4_2 p {
+        line-height: 20px;
+    }
+}

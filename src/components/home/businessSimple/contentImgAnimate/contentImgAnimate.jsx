@@ -1,24 +1,70 @@
-import React from 'react'
-import Styles from "./contentImgAnimate.module.scss"
-import { Images } from '../../../../shared/utils/images'
+import React, { useEffect, useState } from 'react';
+import Styles from "./contentImgAnimate.module.scss";
+import { Images } from '../../../../shared/utils/images';
+import FigmaIcon3D from '../../../../assets/images/home/homeIcon/figmaIcon3D';
+import JavaScriptIcon3D from '../../../../assets/images/home/homeIcon/javaScriptIcon3D';
+import TypeScriptIcon3D from '../../../../assets/images/home/homeIcon/typeScriptIcon3D';
+import AngularIcon3D from '../../../../assets/images/home/homeIcon/angularIcon3D';
+import CssIcon3D from '../../../../assets/images/home/homeIcon/cssIcon3D';
+import ReactIcon3D from '../../../../assets/images/home/homeIcon/reactIcon3D';
+import NodeJSIcon3D from '../../../../assets/images/home/homeIcon/nodeJSIcon3D';
 
 const ContentImgAnimate = () => {
+    const initialImages = [Images.simpleImg2, Images.simpleImg3, Images.simpleImg4, Images.simpleImg];
+
+    const [imageSequence, setImageSequence] = useState(initialImages);
+    const [isFading, setIsFading] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIsFading(true); // Start fade-out effect
+
+            setTimeout(() => {
+                setImageSequence((prevSequence) => {
+                    const rotatedSequence = [...prevSequence];
+                    rotatedSequence.push(rotatedSequence.shift()); // Rotate images
+                    return rotatedSequence;
+                });
+                setIsFading(false); // Start fade-in effect
+            }, 500); // Fade duration (must match CSS)
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
+       
             <div className={Styles.circleOne}>
                 <div className={Styles.circleTwo}>
                     <div className={Styles.circle}>
-                        <div className={Styles.polygon}>
-                        </div>
-                            <img src={Images.simpleImg} className={Styles.simpleImg} alt="Simple" />
-                            <img src={Images.simpleImg2} className={Styles.simpleImg2} alt="Simple" />
-                            <img src={Images.simpleImg3} className={Styles.simpleImg4} alt="Simple" />
-                            <img src={Images.simpleImg4} className={Styles.simpleImg3} alt="Simple" />
+                        <div className={Styles.polygon}></div>
+
+                        {/* Main Image */}
+                        <img
+                            src={imageSequence[0]}
+                            className={`${Styles.mainImg} ${isFading ? Styles.fadeOut : Styles.fadeIn}`}
+                            alt="Main"
+                        />
+
+                        {/* Sub Images */}
+                        {imageSequence.slice(1).map((img, index) => (
+                            <div className={Styles.imgOuter} key={index}>
+                                <img
+                                    src={img}
+                                    className={`${Styles[`simpleImg${index + 2}`]} ${isFading ? Styles.fadeOut : Styles.fadeIn}`}
+                                    alt={`Sub Image ${index + 1}`}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
+            <div className={Styles.dotComp1}><img src={Images.dotImg} className={Styles.dotImg1} alt="Simple" /></div>
+            <div className={Styles.dotComp5}><img src={Images.dotImg} className={Styles.dotImg1} alt="Simple" /></div>
+            <div className={Styles.dotComp3}><img src={Images.dotImg} className={Styles.dotImg1} alt="Simple" /></div>
         </>
-    )
-}
+    );
+};
 
-export default ContentImgAnimate
+export default ContentImgAnimate;

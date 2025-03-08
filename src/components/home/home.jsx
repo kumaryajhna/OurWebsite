@@ -1,63 +1,62 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import BusinessSimple from './businessSimple/businessSimple';
 import OurProjects from './ourProjects/ourProjects';
 import OurBlogs from './ourBlogs/ourBlogs';
-import ClientStories from './clientStories/clientStories';
-import OurClients from './ourClients/ourClients';
 import Footer from '../../layout/footer/footer';
-import StoriesClient from './storiesClient/clientStories';
+import HomeAbout from './homeAbout/homeAbout';
+import HomeServices from './homeServices/homeServices';
+import { useLocation } from 'react-router-dom';
+import ClientsIn from './clientsIn/clientsIn';
 import UseScrollToTop from '../../shared/hooks/useScrollToTop';
 
 const Home = () => {
   UseScrollToTop()
+  const homeRef = useRef(null);
+  const homeAboutRef = useRef(null);
+  const homeServicesRef = useRef(null);
+  const ourProjectsRef = useRef(null);
+  const ourBlogsRef = useRef(null);
+
+  const location = useLocation();
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = document.querySelectorAll('.scroll-animation');
-    elements.forEach(element => {
-      observer.observe(element);
-    });
-
-    return () => {
-      elements.forEach(element => {
-        observer.unobserve(element);
-      });
-    };
-  }, []);
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        const offset = 60; // Offset of 80 pixels
+        const topOffset = section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: topOffset, behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <>
       <div>
-        <BusinessSimple />
-        <div className="scroll-animation">
+        <div ref={homeRef} id="home" className='containerMain'>
+          <BusinessSimple />
+        </div>
+        <div ref={homeAboutRef} id="about" className='containerMain'>
+          <HomeAbout />
+        </div>
+        <div ref={homeServicesRef} id="services" className='containerMain'>
+          <HomeServices />
+        </div>
+        <div ref={ourProjectsRef} id="projects" className='containerMain'>
           <OurProjects />
         </div>
-        <div className="scroll-animation">
+        <div ref={ourBlogsRef} id="blogs" className='containerMain'>
           <OurBlogs comp="home" />
         </div>
-        <div className="scroll-animation">
-          {/* <ClientStories /> */}
-          <StoriesClient />
+        <div ref={ourBlogsRef} id="clientsIn" className='containerMain'>
+          <ClientsIn />
         </div>
-        <div className="scroll-animation">
-          <OurClients />
-        </div>
-        <div className="scroll-animation">
+        <div className='containerMain1'>
           <Footer />
         </div>
       </div>
     </>
   );
-}
+};
 
 export default Home;

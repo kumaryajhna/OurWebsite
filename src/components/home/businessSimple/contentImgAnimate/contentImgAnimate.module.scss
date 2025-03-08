@@ -1,5 +1,6 @@
 @use '../../../../styles/variables.scss' as variables;
 @use '../../../../styles/mixins.scss' as mixins;
+
 .circleOne {
     border: 1px solid variables.$border-color;
     width: 480px;
@@ -7,13 +8,14 @@
     border-radius: 50%;
     @include mixins.flex;
     justify-content: center;
-    align-items: center;
+    margin: 0 40px 0 0;
+    position: relative;
 }
 
 .circleTwo {
     border: 1px solid variables.$border-color;
-    width: 420px;
-    height: 420px;
+    width: 430px;
+    height: 430px;
     border-radius: 50%;
     @include mixins.flex;
     justify-content: center;
@@ -31,62 +33,21 @@
     align-items: center;
 }
 
-.polygon {
-    width: 330px;
-    height: 370px;
-    background-image: url('../../../../assets/images/home/polygon.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @include mixins.flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-10deg); // Adjust the angle as needed
-
+.mainImg {
+    position: absolute;
+    width: 355px;
+    height: 385px;
+    border-radius: 20%;
+    object-fit: cover;
+    clip-path: polygon(38.636% 97.049%, 38.636% 97.049%, 40.792% 98.076%, 43.025% 98.874%, 45.317% 99.444%, 47.649% 99.786%, 50% 99.9%, 52.351% 99.786%, 54.683% 99.444%, 56.975% 98.874%, 59.208% 98.076%, 61.364% 97.049%, 87.842% 82.738%, 87.842% 82.738%, 89.869% 81.503%, 91.724% 80.092%, 93.398% 78.518%, 94.88% 76.799%, 96.161% 74.95%, 97.231% 72.987%, 98.08% 70.926%, 98.699% 68.782%, 99.078% 66.572%, 99.206% 64.312%, 99.206% 35.688%, 99.206% 35.688%, 99.078% 33.428%, 98.699% 31.218%, 98.08% 29.074%, 97.231% 27.013%, 96.161% 25.05%, 94.88% 23.201%, 93.398% 21.482%, 91.724% 19.908%, 89.869% 18.497%, 87.842% 17.262%, 61.364% 2.951%, 61.364% 2.951%, 59.208% 1.924%, 56.975% 1.126%, 54.683% 0.556%, 52.351% 0.214%, 50% 0.1%, 47.649% 0.214%, 45.317% 0.556%, 43.025% 1.126%, 40.792% 1.924%, 38.636% 2.951%, 12.158% 17.262%, 12.158% 17.262%, 10.131% 18.497%, 8.276% 19.908%, 6.602% 21.482%, 5.12% 23.201%, 3.839% 25.05%, 2.769% 27.013%, 1.92% 29.074%, 1.301% 31.218%, 0.922% 33.428%, 0.794% 35.688%, 0.794% 64.312%, 0.794% 64.312%, 0.922% 66.572%, 1.301% 68.782%, 1.92% 70.926%, 2.769% 72.987%, 3.839% 74.95%, 5.12% 76.799%, 6.602% 78.518%, 8.276% 80.092%, 10.131% 81.503%, 12.158% 82.738%, 38.636% 97.049%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-.simpleImg {
+
+.polygon {
     width: 350px;
-    height: auto;
-    position: absolute;
-
-}
-
-.simpleImg2 {
-    position: absolute;
-    right: 100px;
-    top: 220px;
-    width: 60px;
-}
-
-.simpleImg3 {
-    position: absolute;
-    top: 340px;
-    right: 540px;
-    width: 90px;
-}
-
-.simpleImg4 {
-    position: absolute;
-    top: -26px;
-    transform: rotate(0deg);
-    width: 60px;
-    margin: 0 0 0 -40px;
-}
-
-@keyframes rotatePolygon {
-    from {
-        transform: rotate(-10deg);
-    }
-    to {
-        transform: rotate(350deg); // Rotates fully but keeps the original offset
-    }
-}
-
-.polygon {
-    width: 330px;
-    height: 370px;
-    background-image: url('../../../../assets/images/home/polygon.svg');
+    height: 380px;
+    background-image: url('../../../../assets/images/home/polygonImg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,8 +56,492 @@
     align-items: center;
     transform: rotate(-10deg); // Initial rotation
     animation: rotatePolygon 10s linear infinite; // Slow continuous rotation
+
+}
+
+
+.simpleImg2 {
+    position: absolute;
+    right: -45px;
+    top: 210px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
+.simpleImg3 {
+    position: absolute;
+    top: 380px;
+    right: 400px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+
+
+}
+
+.simpleImg4 {
+    position: absolute;
+    top: -30px;
+    right: 310px;
+    transform: rotate(0deg);
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+@keyframes rotatePolygon {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(350deg); // Rotates fully but keeps the original offset
+    }
+}
+
+
+// .fadeIn {
+//     opacity: 1;
+//     transform: scale(1);
+// }
+
+// .fadeOut {
+//     opacity: 0;
+//     transform: scale(0.95);
+// }
+
+.simpleImg2,
+.simpleImg3,
+.simpleImg4 {
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@keyframes swing {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 
 
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
 
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.animateReactIconJs {
+    position: absolute;
+    opacity: .5;
+    right: 537px;
+    top: 130px;
+    animation: swing 2s ease-in-out infinite; // Swings left and right
+}
+
+.animateReactIconFg {
+    position: absolute;
+    opacity: .5;
+    right: 150px;
+    top: 50px;
+    animation: pulse 1.5s ease-in-out infinite; // Grows and shrinks like a pulse
+}
+
+.animateReactIconTs {
+    position: absolute;
+    opacity: .5;
+    top: 350px;
+    right: 740px;
+    // animation: slideInOut 2s ease-in-out infinite; // Slides left and right
+    animation: bounce 1.5s ease-in-out infinite; // Bouncing up and down
+
+}
+
+.animateReactIconAg {
+    position: absolute;
+    opacity: .5;
+    right: 130px;
+    top: 380px;
+    animation: flip 3s linear infinite; // Flips 360° along the Y-axis
+}
+
+@keyframes orbitGlow {
+    0% {
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+        filter: drop-shadow(0px 0px 5px rgba(0, 255, 150, 0.5));
+        /* Green glow */
+    }
+
+    25% {
+        transform: translateX(5px) translateY(-5px) rotate(10deg) scale(1.05);
+        filter: drop-shadow(0px 0px 10px rgba(0, 255, 150, 0.7));
+    }
+
+    50% {
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+        filter: drop-shadow(0px 0px 5px rgba(0, 255, 150, 0.5));
+    }
+
+    75% {
+        transform: translateX(-5px) translateY(5px) rotate(-10deg) scale(0.95);
+        filter: drop-shadow(0px 0px 10px rgba(0, 255, 150, 0.7));
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) rotate(0deg) scale(1);
+        filter: drop-shadow(0px 0px 5px rgba(0, 255, 150, 0.5));
+    }
+}
+
+// .animateReactIconCs {
+//     position: absolute;
+//     right: 410px;
+//     top: 445px;
+//     animation: orbitGlow 3s ease-in-out infinite;
+// }
+
+
+
+
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// animateReactIcon
+.animateReactIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 537px;
+    top: 130px;
+    margin: 0 0 0 30px;
+    opacity: .5;
+    animation: rotate360 8s linear infinite; // 3s duration, smooth rotation
+}
+
+@keyframes floatTilt {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(10px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.animateNodeIcon {
+    position: absolute;
+    right: 410px;
+    top: 445px;
+    opacity: .8;
+    animation: floatTilt 3s ease-in-out infinite; // Floating & Tilting Effect
+}
+
+.dotComp1 {
+    position: absolute;
+    top: 170px;
+    left: 52%;
+}
+
+.dotComp3 {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    z-index: -1;
+}
+
+.dotComp5 {
+    position: absolute;
+    top: 530px;
+    right: 240px;
+    z-index: -1;
+}
+
+.dotImg1 {
+    width: 55px;
+}
+
+@media (max-width: 1430px) {
+    .circleOne {
+        width: 420px;
+        height: 420px;
+    }
+
+    .circleTwo {
+        width: 370px;
+        height: 370px;
+    }
+
+    .circle {
+        width: 340px;
+        height: 340px;
+    }
+
+    .mainImg {
+        width: 315px;
+        height: 328px;
+    }
+
+
+    .polygon {
+        width: 310px;
+        height: 330px;
+    }
+
+    .simpleImg3 {
+        top: 320px;
+        right: 360px;
+    }
+
+    .simpleImg4 {
+        top: -35px;
+        right: 240px;
+    }
+
+    .dotComp1 {
+        top: 110px;
+    }
+
+    .dotComp5 {
+        top: 500px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .circleOne {
+        width: 480px;
+        height: 480px;
+        margin: 0;
+    }
+
+    .circleTwo {
+        width: 430px;
+        height: 430px;
+    }
+
+    .circle {
+        width: 380px;
+        height: 380px;
+    }
+
+    .mainImg {
+        width: 355px;
+        height: 385px;
+    }
+
+
+    .polygon {
+        width: 350px;
+        height: 380px;
+    }
+
+    .simpleImg3 {
+        top: 380px;
+        right: 400px;
+    }
+
+    .simpleImg4 {
+        top: -30px;
+        right: 310px;
+    }
+
+    .dotComp1 {
+        top: 60%;
+        left: 8%;
+    }
+
+    .dotComp3 {
+        top: 45%;
+        right: 25%;
+    }
+
+    .dotComp5 {
+        top: 95%;
+        right: 29%;
+    }
+}
+
+@media (max-width: 550px) {
+    .circleOne {
+        width: 380px;
+        height: 380px;
+
+    }
+
+    .circleTwo {
+        width: 340px;
+        height: 340px;
+    }
+
+    .circle {
+        width: 310px;
+        height: 310px;
+    }
+
+    .mainImg {
+        width: 290px;
+        height: 300px;
+    }
+
+
+    .polygon {
+        width: 280px;
+        height: 300px;
+    }
+
+    .simpleImg3 {
+        top: 290px;
+        right: 330px;
+    }
+
+    .simpleImg4 {
+        top: -35px;
+        right: 240px;
+    }
+
+    .simpleImg2 {
+        top: 160px;
+    }
+
+    .dotComp1 {
+        top: 65%;
+        left: 20px;
+    }
+    .dotComp3 {
+        top: 58%;
+        right: 15%;
+    }
+
+    .dotComp5 {
+        top: 95%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .circleOne {
+        width: 300px;
+        height: 300px;
+        margin: 0 0 0 -10px;
+
+
+    }
+
+    .circleTwo {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .mainImg {
+        width: 230px;
+        height: 240px;
+    }
+
+
+    .polygon {
+        width: 220px;
+        height: 240px;
+    }
+
+    .simpleImg3 {
+        top: 230px;
+        left: 0px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .simpleImg4 {
+        top: -25px;
+        right: 150px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .simpleImg2 {
+        top: 130px;
+        right: -25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .dotComp1 {
+        top: 65%;
+        left: 20px;
+    }
+    .dotComp3 {
+        top: 62%;
+        right: 15%;
+    }
+
+    .dotComp5 {
+        top: 95%;
+    }
+    .dotImg1{
+        width: 35px;
+    }
+}

@@ -1,55 +1,121 @@
 @use '../../styles/variables' as variables;
 @use '../../styles/mixins' as mixins;
 
+.mainContainerHeader {
+    // width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 .containerHeader {
+    padding: 10px 80px;
     @include mixins.flex;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color:variables.$common-color ;
+    background-color: variables.$common-color;
     position: fixed;
-    width: -webkit-fill-available;
-    z-index: 999;
+    width: 100%;
+    z-index: 99;
     top: 0;
-    // border-bottom: 1px solid #faf3f3;
+    max-width: 1530px;
+    /* X-offset | Y-offset | Blur-radius | Shadow-color */
 
 }
 
 .imgLogo {
-    width: 250px;
+    width: 250px; // Default for large screens
+    cursor: pointer;
+}
+
+.threeLines {
+    font-size: 40px; // Default for large screens
+    display: none;
     cursor: pointer;
 }
 
 .link {
     text-decoration: none;
     color: variables.$third-color;
-    // font-size: variables.$body_font;
-    font-size: 17px;
-    color: variables.$third-color;
+    font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .link:hover {
     @include mixins.textLinear;
-    text-decoration: none;
-    // font-size: variables.$body_font;
-    font-size: 17px;
-    font-weight: 500;
 }
 
 .active {
     @include mixins.textLinear;
-    text-decoration: none;
-    // font-size: variables.$body_font ;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .headerRight {
     @include mixins.flex;
     gap: 40px;
+    // margin-left: 20px;
 }
 
 .btnContactUs {
     @include mixins.btn;
-    padding: 6px 20px;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .containerHeader {
+        padding: 10px 30px;
+    }
+}
+
+// @media (max-width: 1070px) {
+
+// }
+
+@media (max-width: 1000px) {
+    .containerHeader {
+        padding: 10px 20px;
+    }
+
+    .headerRight {
+        display: none;
+    }
+
+    .btnContactUs {
+        display: none;
+    }
+
+    .threeLines {
+        display: block;
+        margin: -5px 0 0 0;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+    .imgLogo {
+        width: 180px;
+    }
+
+    .threeLines {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imgLogo {
+        width: 165px;
+    }
+
+    .threeLines {
+        font-size: 30px;
+        margin: -5px 0 0 0;
+    }
 }

@@ -23,19 +23,24 @@ const Footer = () => {
         <div className={Styles.companyInfo}>
           <div className={Styles.footerTop}>
             <div className={Styles.imgInfo}>
-              <img src={Images.logo} className={Styles.bottomImg} />
+              <img src={Images.pactLogo} className={Styles.bottomImg} />
               <div className={Styles.detailInfo}>
                 <div className={Styles.iconText}>
-                  <BiSolidPhoneCall color='#1C98CB' size={20} />
-                  <span>+1012 3456 789</span>
+                  <BiSolidPhoneCall color='#1C98CB' size={20} style={{margin:'2px 0 0 0'}} />
+                  <div>
+                    <div style={{letterSpacing:'2.5px',color:'#1b1464'}}>+91 8222822115</div>
+                    <div style={{letterSpacing:'2.5px',color:'#1b1464'}}>+91 8222822116</div>
+                  </div>
+                  {/* <span>+91 8222822115</span> */}
                 </div>
                 <div className={Styles.iconText}>
                   <IoMailSharp color='#1C98CB' size={20} />
-                  <span>pacteazy@gmail.com</span>
+                  <span>contact@pacteazy.com</span>
                 </div>
                 <div className={Styles.iconText}>
                   <MdLocationPin color='#1C98CB' size={20} />
-                  <span>132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
+                  {/* <span>132 Dartmouth Street Boston, Massachusetts 02156 United States</span> */}
+                  <span>Arundathi Nagar, Vizianagaram 535003, Andhra Pradesh, India</span>
                 </div>
               </div>
             </div>
@@ -49,7 +54,9 @@ const Footer = () => {
               </div> */}
               <div>
                 {navigationLinks.map(({ name, path }) => (
-                  <span key={name} onClick={() => navigate(path)}>{name}</span>
+                  <span key={name}
+                  // onClick={() => navigate(path)}
+                  >{name}</span>
                 ))}
               </div>
             </div>
@@ -74,7 +81,7 @@ const Footer = () => {
                 <h6>Join Our Newsletter</h6>
                 <div className={Styles.inputBtn}>
                   <input type="text" className={Styles.inputEmail} placeholder="Your email address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                  <button class="input-group-text" id="basic-addon2">Subscribe</button>
+                  <button className="input-group-text" id="basic-addon2">Submit</button>
                 </div>
                 <p>Will send you weekly updates for your better tool management.</p>
               </div>
@@ -85,8 +92,7 @@ const Footer = () => {
                   <div><img src={Images.instagram} alt="Instagram" /></div>
                   <div><img src={Images.xIcon} alt="X" /></div>
                   <div><img src={Images.youtube} alt="YouTube" /></div>
-                  <div><img src={Images.threads} alt="Threads" /></div>
-
+                  {/* <div><img src={Images.threads} alt="Threads" /></div> */}
                 </div>
               </div>
             </div>
@@ -94,10 +100,10 @@ const Footer = () => {
           <div className={Styles.textCopyRights}>Copyright 2023 <span>Pacteazy</span> - All Right Reserved</div>
         </div>
         <div className={Styles.footerBottom}>
-          <p>Have an idea you want to share with us? Let’s connect.</p>
+          {/* <p>Have an idea you want to share with us? Let’s connect.</p>
           <button onClick={navigateContactUs}>
             <small>Contact Us</small>
-          </button>
+          </button> */}
 
         </div>
       </div>

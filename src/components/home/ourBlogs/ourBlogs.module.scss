@@ -3,9 +3,12 @@
 
 .containerOurBlogs {
     display: flex;
-    padding: 30px 5%;
+    padding: 30px 80px;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    overflow: hidden;
+    max-width: 1500px;
+
 }
 
 .containerOurBlogs h3 {
@@ -15,18 +18,15 @@
     font-size: variables.$header-font;
     justify-content: center;
     gap: 5px;
-
+    padding: 30px 0;
 }
-
-
 
 h3 span {
     color: variables.$third-color;
-
 }
 
 .blogsRecent {
-    margin: 0px 40px 20px 60px;
+    margin: 0 0 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -36,7 +36,7 @@ h3 span {
 .blogs {
     display: flex;
     align-items: start;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -44,31 +44,52 @@ h3 span {
     gap: 20px;
     display: flex;
     flex-direction: column;
-
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.3s ease, border 0.3s ease;
+    max-width: 670px;
 }
+
+.blogsLeft:hover {
+    transform: scale(1.05);
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg, rgba(28, 152, 203, 0.81) 0%, #1B1464 100%) border-box;
+    border: 1px solid transparent;
+}
+
 
 .blogsRight {
     display: flex;
     flex-direction: column;
     width: 50%;
-
 }
 
 .blogUxImg {
     width: 650px;
 }
 
-
 .blogsLeftInfo {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 25px;
+    gap: 20px;
+}
+.blogItem:hover {
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg, rgba(28, 152, 203, 0.81) 0%, #1B1464 100%) border-box;
+    border: 1px solid transparent;
+
 }
 
 .blogItem {
     display: flex;
     gap: 20px;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+cursor: pointer;
+
 }
 
 .imageContainer {
@@ -87,7 +108,7 @@ h3 span {
 }
 
 .blogContent h4 {
-    color: variables.$third-color;
+    color: variables.$primary-color;
     font-weight: 600;
     text-align: left;
     margin: 2px 0;
@@ -99,7 +120,6 @@ h3 span {
     font-size: variables.$body_font;
     font-weight: 400;
     text-align: left;
-
 }
 
 .blogContent h6 {
@@ -108,7 +128,6 @@ h3 span {
     font-weight: 600;
     text-align: left;
     margin: 0;
-
 }
 
 .blogContent div {
@@ -125,8 +144,6 @@ h3 span {
     background-color: #EEE5FD;
     padding: 2px 8px;
     border-radius: 11px;
-
-
 }
 
 .courceResearch {
@@ -150,9 +167,9 @@ h3 span {
 }
 
 .btnArrow {
-    margin: 50px 0px;
+    margin: 50px 0;
     @include mixins.btn;
-    padding: 6px 25px 10px 25px
+    padding: 6px 25px 10px 25px;
 }
 
 .buttonBlock {
@@ -163,11 +180,122 @@ h3 span {
 .arrowText {
     @include mixins.flex;
     justify-content: space-between;
-    height: 30px;
+    // height: 30px;
     color: variables.$third-color;
 }
 
 .textRecent {
     color: variables.$third-color;
     font-weight: 600;
+}
+
+/* ======= ANIMATIONS ======= */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slideLeft {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slideRight {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@media (max-width: 1400px) {
+    .blogs {
+        flex-direction: column;
+    }
+
+    .blogsLeft {
+        flex-direction: row;
+    }
+
+    .blogsLeftInfo {
+        flex-direction: row;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .containerOurBlogs {
+        padding: 70px 50px;
+    }
+
+    .blogsLeftInfo {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .containerOurBlogs {
+        padding: 20px 30px;
+    }
+
+    .blogUxImg {
+        width: 320px;
+        height: 180px;
+        transform: scaleY(1.5);
+    }
+}
+
+@media (max-width: 700px) {
+    .blogsLeft {
+        flex-direction: column;
+    }
+
+    .blogUxImg {
+        width: calc(100vw - 50px);
+        height: auto;
+        transform: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .blogItem {
+        flex-direction: column;
+    }
+
+    .blogImage {
+        width: calc(100vw - 40px);
+        height: auto;
+    }
+}
+
+@media (max-width:550px) {
+    .containerOurBlogs {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .containerOurBlogs h3 {
+        font-size: 28px;
+    }
+
 }

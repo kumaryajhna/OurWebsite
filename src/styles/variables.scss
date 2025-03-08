@@ -15,26 +15,62 @@ $pinkishRed-color: #C01048;
 $mediumDarkPurple-color: #6941C6;
 $grayishBlue-color: #363F72;
 $border-color: #fce0e0;
-// $border-color: #F2F2F2;
-
-// Sizes Define 
 
 
+$display_font: 2.75em; // 44px - Largest font for main headers
+$header-font: 2em; // 32px - Primary headers
+$slide_title: 1.625em; // 26px - Slide header
+$title_font: 1.375em; // 22px
+$body_large_font: 1.1875em; // 19px
+$subtitle_font: 1.25em; // 18px - Subsection headers
+$body_font: 0.9375em; // 15.5px - Default body text
+$caption_font: 0.75em; // 12px - Captions or metadata
 
+/* ======= GROUPED MEDIA QUERIES FOR FONT SCALING ======= */
+@media (max-width: 1200px) {
+    $display_font: 2.5em; // 40px
+    $header-font: 1.875em; // 30px
+    $slide_title: 1.5em; // 24px
+    $title_font: 1.25em; // 20px
+    $body_large_font: 1.125em; // 18px
+    $subtitle_font: 1.125em; // 18px
+    $body_font: 0.875em; // 14px
+    $caption_font: 0.6875em; // 11px
+}
 
-// #fce0e0
+@media (max-width: 992px) {
+    $display_font: 2.25em; // 36px
+    $header-font: 1.75em; // 28px
+    $slide_title: 1.375em; // 22px
+    $title_font: 1.125em; // 18px
+    $body_large_font: 1em; // 16px
+    $subtitle_font: 1.125em; // 18px
+    $body_font: 0.875em; // 14px
+    $caption_font: 0.6875em; // 11px
+}
 
+@media (max-width: 768px) {
+    $display_font: 2em; // 32px
+    $header-font: 1.625em; // 26px
+    $slide_title: 1.25em; // 20px
+    $title_font: 1em; // 16px
+    $body_large_font: 0.9375em; // 15px
+    $subtitle_font: 1em; // 16px
+    $body_font: 0.8125em; // 13px
+    $caption_font: 0.625em; // 10px
+}
 
+@media (max-width: 550px) {
+    $display_font: 1.875em; // 30px
+    $header-font: 1.5em; // 24px
+    $slide_title: 1.125em; // 18px
+    $title_font: 0.9375em; // 15px
+    $body_large_font: 0.875em; // 14px
+    $subtitle_font: 0.875em; // 14px
+    $body_font: 0.75em; // 12px
+    $caption_font: 0.5625em; // 9px
+}
 
-$display_font: 2.75em; // 44px - used......Largest font for main headers use 
-$header-font: 2em; // 32px - used......  Primary headers use 
-$slide_title: 1.625em; // 26px - Used Slide header
-$title_font: 1.375em; // 22px -   used......  
-$body_large_font: 1.1875em; // 19px -  used......
-$subtitle_font: 1.25em; // 18px - used......  Subsection headers  use
-$body_font: 0.9375em; // 15.5px - Default body text   use
-// $medium_body_font: 0.9375em; // 15px - Default body text   use
-$caption_font: 0.75em; // 12px - used...... Captions or metadata  
 
 
 $subheader_font: 1.625em; // 26px - Sub headers  use

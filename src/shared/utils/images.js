@@ -1,7 +1,16 @@
-import Logo from '../../assets/images/other/logo.svg'
+import PactLogo from '../../assets/images/other/pactLogo.png'
 import PLogo from '../../assets/images/other/plogo.svg'
+
 import Polygon from '../../assets/images/home/polygon.svg'
+import PolygonWhite from '../../assets/images/home/polygonWhite.svg'
+
+
 import DotImg from '../../assets/images/home/dotImg.svg'
+import AiService from '../../assets/images/home/aiService.svg'
+import MobileService from '../../assets/images/home/mobileService.svg'
+import CmsService from '../../assets/images/home/cmsService.svg'
+import WebService from '../../assets/images/home/webService.svg'
+
 import DotLighterImg from '../../assets/images/home/dotLighterImg.svg'
 
 
@@ -9,19 +18,21 @@ import SimpleImg from '../../assets/images/home/simpleImg.svg'
 import SimpleImg2 from '../../assets/images/home/simpleImg2.svg'
 import SimpleImg3 from '../../assets/images/home/simpleImg3.svg'
 import SimpleImg4 from '../../assets/images/home/simpleImg4.svg'
+import ExpandIcon from '../../assets/images/home/expandIcon.svg'
+
 import Bizstarterr from '../../assets/images/products/bizstarterrProduct.svg'
-import Outward from '../../assets/images/products/outward.svg'
 import GPSTrack from '../../assets/images/products/gpsTrack.svg'
 import KGFair from '../../assets/images/products/kgfair.svg'
 
 
 import Finance from '../../assets/images/products/financeProduct.svg'
-import Rental from '../../assets/images/products/rentalProduct.svg'
+// import RentalHome from '../../assets/images/products/rentalHome.svg'
+
 import Ipt from '../../assets/images/products/iptProduct.svg'
 import OurMission from '../../assets/images/products/ourMission.svg'
-import BlogMigrating from '../../assets/images/blogs/blogMigrating.svg'
-import BlogUx from '../../assets/images/blogs/blogUx.svg'
-import BlogApiStack from '../../assets/images/blogs/blogApiStack.svg'
+import BlogCloud from '../../assets/images/blogs/blogCloud.svg'
+import BlogAi from '../../assets/images/blogs/blogAi.svg'
+import BlogCompare from '../../assets/images/blogs/blogCompare.svg'
 import QuoteRight from '../../assets/images/products/quoteRight.svg'
 import QuoteLeft from '../../assets/images/products/quoteLeft.svg'
 import Toyota from '../../assets/images/clients/toyota.svg'
@@ -42,6 +53,24 @@ import BlogWireframing from '../../assets/images/blogs/blogWireframing.svg'
 import BlogDesigners from '../../assets/images/blogs/blogDesigners.svg'
 import BlogFrameworks from '../../assets/images/blogs/blogFrameworks.svg'
 import BlogCommunity from '../../assets/images/blogs/blogCommunity.svg'
+import SoftwareDominates from '../../assets/images/blogs/softwareDominates.svg'
+import AiAutomation from '../../assets/images/blogs/aiAutomation.svg'
+import SoftwareDevelopment from '../../assets/images/blogs/softwareDevelopment.svg'
+
+import SolarGraphLinear from '../../assets/images/blogs/solarGraphLinear.svg'
+import QuickCompare from '../../assets/images/blogs/quickCompare.svg'
+import Universe from '../../assets/images/blogs/universe.svg'
+import OfficeBuilding from '../../assets/images/blogs/officeBuilding.svg'
+import SearchImg from '../../assets/images/blogs/searchImg.svg'
+import CheckboxTick from '../../assets/images/blogs/checkboxTick.svg';
+import LightBulb from '../../assets/images/blogs/lightBulb.svg';
+import RocketBlog from '../../assets/images/blogs/rocketBlog.svg';
+import GraphBar from '../../assets/images/blogs/graphBar.svg';
+import RobotImg from '../../assets/images/blogs/robotImg.svg';
+
+
+
+
 import ServicesDesign from '../../assets/images/services/servicesDesign.svg'
 import ServicesMarketing from '../../assets/images/services/servicesMarketing.svg'
 import ServicesDevelop from '../../assets/images/services/servicesDevelop.svg'
@@ -53,9 +82,14 @@ import Html from '../../assets/images/services/technologies/html.svg'
 import Css from '../../assets/images/services/technologies/css.svg'
 import CircleCheck from '../../assets/images/products/circleCheck.svg'
 import Ipt2 from '../../assets/images/products/ipt.svg'
-import Rental2 from '../../assets/images/products/rental.svg'
+
+import RentalProduct from '../../assets/images/products/rentalProduct.svg'
+import OnlineExamProduct from '../../assets/images/products/onlineExamProduct.svg'
+import LogisticsProduct from '../../assets/images/products/logisticsProduct.svg'
+import FinanceProduct from '../../assets/images/products/financeProduct.svg'
+
+
 // import Bizstarterr2 from '../../assets/images/products/bizstarterr.svg'
-import Finance2 from '../../assets/images/products/finance.svg'
 import Member1 from '../../assets/images/ourTeam/member1.svg'
 import Member2 from '../../assets/images/ourTeam/member2.svg'
 import Member3 from '../../assets/images/ourTeam/member3.svg'
@@ -69,7 +103,16 @@ import Innovative from'../../assets/images/about/coreValue/innovative.svg'
 import Trustworthy from'../../assets/images/about/coreValue/trustworthy.svg'
 import Empathetic from'../../assets/images/about/coreValue/empathetic.svg'
 import Person from '../../assets/images/contactus/person.svg'
+import LocationCompany from '../../assets/images/contactus/locationCompany.svg'
 
+
+
+
+import AustraliaFlag from '../../assets/images/home/flags/australiaFlag.svg'
+import CanadaFlag from '../../assets/images/home/flags/canadaFlag.svg'
+import IndiaFlag from '../../assets/images/home/flags/indiaFlag.svg'
+import UAEFlag from '../../assets/images/home/flags/uaeFlag.svg'
+import USFlag from '../../assets/images/home/flags/usFlag.svg'
 
 
 
@@ -77,27 +120,43 @@ import Person from '../../assets/images/contactus/person.svg'
 
 
 export const Images = {
-    logo: Logo,
+    australiaFlag:AustraliaFlag,
+    canadaFlag:CanadaFlag,
+    indiaFlag:IndiaFlag,
+    uaeFlag:UAEFlag,
+    usFlag:USFlag,
+
+    rentalProduct:RentalProduct,
+    logisticsProduct:LogisticsProduct,
+    financeProduct:FinanceProduct,
+    onlineExamProduct:OnlineExamProduct,
+    bizstarterr: Bizstarterr,
+
+    pactLogo:PactLogo,
     plogo: PLogo,
     polygon: Polygon,
     dotImg:DotImg,
+    polygonWhite:PolygonWhite,
+    aiService:AiService,
+    mobileService:MobileService,
+    cmsService:CmsService,
+    webService:WebService,
     dotLighterImg:DotLighterImg,
-
+    expandIcon:ExpandIcon,
     simpleImg: SimpleImg,
     simpleImg2: SimpleImg2,
     simpleImg3: SimpleImg3,
     simpleImg4: SimpleImg4,
-    bizstarterr: Bizstarterr,
-    outward:Outward,
     kgfair:KGFair,
     gpsTrack:GPSTrack,
     finance: Finance,
-    rental: Rental,
+    // rental: Rental,
+    // rentalHome:RentalHome,
     ipt: Ipt,
     ourMission: OurMission,
-    blogMigrating: BlogMigrating,
-    blogUx: BlogUx,
-    blogApiStack: BlogApiStack,
+    blogCloud: BlogCloud,
+    blogAi: BlogAi,
+    blogCompare: BlogCompare,
     quoteRight: QuoteRight,
     quoteLeft: QuoteLeft,
     toyota: Toyota,
@@ -118,6 +177,20 @@ export const Images = {
     blogDesigners: BlogDesigners,
     blogFrameworks: BlogFrameworks,
     blogCommunity: BlogCommunity,
+
+    softwareDominates:SoftwareDominates,
+    aiAutomation:AiAutomation,
+    softwareDevelopment:SoftwareDevelopment,
+    solarGraphLinear:SolarGraphLinear,
+    officeBuilding:OfficeBuilding,
+    quickCompare:QuickCompare,
+    checkboxTick:CheckboxTick,
+    graphBar:GraphBar,
+    searchImg:SearchImg,
+    rocketBlog:RocketBlog,
+    robotImg:RobotImg,
+    universe:Universe,
+    lightBulb:LightBulb,
     servicesDesign: ServicesDesign,
     servicesMarketing: ServicesMarketing,
     servicesDevelop: ServicesDevelop,
@@ -130,8 +203,6 @@ export const Images = {
     circleCheck: CircleCheck,
     ipt2: Ipt2,
     // bizstarterr2: Bizstarterr2,
-    finance2: Finance2,
-    rental2: Rental2,
     member1: Member1,
     member2: Member2,
     member3: Member3,
@@ -144,8 +215,9 @@ export const Images = {
     innovative:Innovative,
     trustworthy:Trustworthy,
     empathetic:Empathetic,
-    person:Person
-
+    person:Person,
+    locationCompany:LocationCompany
 
 
 }
+
