@@ -22,7 +22,7 @@
 }
 
 h3 span {
-    color: variables.$third-color;
+    color: variables.$primary-color;
 }
 
 .blogsRecent {
@@ -230,13 +230,19 @@ cursor: pointer;
     .blogs {
         flex-direction: column;
     }
-
+    
     .blogsLeft {
         flex-direction: row;
+        // max-width: max-content;
+        max-width: -webkit-fill-available;
     }
 
     .blogsLeftInfo {
         flex-direction: row;
+    }
+    
+    .blogsLeftInfo {
+        flex-wrap: wrap;
     }
 }
 
@@ -246,14 +252,14 @@ cursor: pointer;
         padding: 70px 50px;
     }
 
-    .blogsLeftInfo {
-        flex-wrap: wrap;
-    }
+    // .blogsLeftInfo {
+    //     flex-wrap: wrap;
+    // }
 }
 
 @media (max-width: 1100px) {
     .containerOurBlogs {
-        padding: 20px 30px;
+        padding: 20px 10px;
     }
 
     .blogUxImg {

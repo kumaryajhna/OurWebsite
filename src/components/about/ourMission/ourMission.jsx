@@ -58,7 +58,9 @@ const OurMission = () => {
 
                 </div>
                 <div className={Styles.ourMission1}>
-                    With a strong focus on operational excellence and cutting-edge innovation, we collaborate with clients across diverse industries to craft technology solutions tailored to their unique business needs. From custom software development and automation to digital transformation and enterprise solutions, we combine creativity and deep technical expertise to deliver solutions that drive meaningful impact and measurable results.
+                    With a strong focus on operational excellence and cutting-edge innovation, we collaborate with clients across diverse industries to craft technology solutions tailored to their unique business needs. 
+                    {/* From custom software development and automation to digital transformation and enterprise solutions,  */}
+                    we combine creativity and deep technical expertise to deliver solutions that drive meaningful impact and measurable results.
                 </div>
                 <div className={Styles.ourMission1}>
 

@@ -7,14 +7,30 @@ import Footer from '../../../../../layout/footer/footer'
 import { Images } from '../../../../../shared/utils/images'
 import { IoMdCloudOutline } from "react-icons/io";
 import UseScrollToTop from '../../../../../shared/hooks/useScrollToTop'
-
+import { Helmet } from "react-helmet";
+import { Paths } from '../../../../../browserRouter/paths/paths'
 const SoftwareDevelopment = () => {
-  UseScrollToTop()
+    UseScrollToTop()
 
     const [open, setOpen] = useState(false);
     const [openMobile, setOpenMobile] = useState(false);
     return (
         <>
+            <Helmet>
+                <title>Cloud vs On-Premise Software – Which One is Right for Your Business?</title>
+                <meta
+                    name="description"
+                    content="Compare Cloud vs On-Premise Software to determine the best fit for your business. Explore costs, security, scalability, and flexibility in cloud computing and traditional IT solutions."
+                />
+                <meta
+                    name="keywords"
+                    content="Cloud Software, On-Premise Software, Cloud vs On-Premise, SaaS vs On-Premise, Business Cloud Solutions, Cloud Migration Strategy, IT Infrastructure, Cloud Computing, Cloud Security, On-Premise IT, Hybrid Cloud, Cloud Adoption Benefits"
+                />
+                <meta name="author" content="Pacteazy" />
+                <meta name="publisher" content="Pacteazy" />
+                <link rel="canonical" href={Paths.SoftwareDevelopment} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className={Styles.containerSoftwareDominatesMain}>
                 <div className={Styles.containerSoftwareDominates}>
                     <h2>Cloud vs On-Premise Software – What’s Best for Your Business?</h2>
@@ -42,7 +58,7 @@ const SoftwareDevelopment = () => {
                         <li className={Styles.blinkingDotDev}><b>Limited Customization :</b>  Some cloud platforms offer less flexibility for deep customization.</li>
                     </ul>
 
-                    <div><img src={Images.officeBuilding} className={Styles.blogImg} /><b>What is On-Premise Software?</b></div>
+                    <div className={Styles.question}><img src={Images.officeBuilding} className={Styles.blogImg} /><b>What is On-Premise Software?</b></div>
                     <p>On-premise software is installed directly on your company’s servers and computers. Your internal IT team manages everything — from installation and security to updates and maintenance.</p>
 
 
@@ -90,7 +106,7 @@ const SoftwareDevelopment = () => {
 
 
 
-                    
+
                     <div className={Styles.question}> <img src={Images.checkboxTick} className={Styles.blogImg} /> <b>Key Factors to Consider When Choosing</b></div>
                     <p>Here’s a simple way to decide:</p>
                     <div className={Styles.softwareDominatesTable}>
@@ -117,7 +133,7 @@ const SoftwareDevelopment = () => {
 
                     <div className={Styles.question}> <img src={Images.lightBulb} className={Styles.blogImg} />    <b>Hybrid Approach – Best of Both Worlds?</b></div>
                     <p>Some businesses adopt a hybrid strategy, using cloud software for general operations (like CRM or accounting) while keeping critical systems on-premise for better control and security. This approach works especially well for larger enterprises with complex IT needs.</p>
-                   
+
 
                     <div className={Styles.question}><b>Conclusion</b> </div>
                     <p>The right choice depends on your business size, budget, IT capabilities, and operational needs. Startups and small businesses often benefit from cloud software for its flexibility and lower costs, while enterprises in heavily regulated industries may prefer the control and customization of on-premise software.</p>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Styles from "./animatedCube.module.scss"; // Import SCSS for styling
-import { FaHome, FaUser, FaCog, FaChartBar, FaEnvelope, FaGlobe } from "react-icons/fa"; // Example icons
 import ReactIcon3D from "../../../../assets/images/home/homeIcon/reactIcon3D";
 import AngularIcon3D from "../../../../assets/images/home/homeIcon/angularIcon3D";
 import FigmaIcon3D from "../../../../assets/images/home/homeIcon/figmaIcon3D";

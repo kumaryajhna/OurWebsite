@@ -175,7 +175,7 @@ export const ClientsInInfo = [
 export const OurHomeList = [
     {
         id: 1,
-        img: Images.aiService,
+        img: Images.webDesign,
         header: 'Web Designing',
         description: 'Our services include AI consulting, custom development, and analytics, all harnessing machine learning to automate processes, enhance decision-making, and personalize interactions.',
         listOfData: [
@@ -189,21 +189,8 @@ export const OurHomeList = [
     },
     {
         id: 2,
-        img: Images.mobileService,
+        img: Images.webMobileDev,
         header: 'Web & Mobile Development',
-        description: 'Use custom mobile app development services to build high-performance, feature-rich applications for iOS and Android.',
-        listOfData: [
-            "Market Research",
-            "PPC / Google Adwords",
-            "Social Media Marketing",
-            "Email Marketing",
-            "Search Engine Optimization",
-        ]
-    },
-    {
-        id: 3,
-        img: Images.cmsService,
-        header: 'Digital Marketing',
         description: 'Customized CRM solutions streamline customer interactions and boost sales efficiency. They automate key processes to enhance productivity.',
         listOfData: [
 
@@ -215,11 +202,26 @@ export const OurHomeList = [
             "Mobile App Development (IOS/Android/Cross platform)",
         ]
 
+    },
+    {
+        id: 3,
+        img: Images.digitalMarketing,
+        header: 'Digital Marketing',
+        description: 'Use custom mobile app development services to build high-performance, feature-rich applications for iOS and Android.',
+        listOfData: [
+            "Market Research",
+            "PPC / Google Adwords",
+            "Social Media Marketing",
+            "Email Marketing",
+            "Search Engine Optimization",
+        ]
+      
+
 
     },
     {
         id: 4,
-        img: Images.webService,
+        img: Images.otherImg,
         header: 'Others',
         description: 'Our comprehensive web development solutions include e-commerce, content management systems, and custom web applications.',
         listOfData: [
@@ -234,6 +236,45 @@ export const OurHomeList = [
 
 
     },
+]
+
+
+export const ChooseUsList = [
+    {
+        id: 1,
+        img: Images.cuttingEdge,
+        header: 'Cutting-Edge Technology',
+        description: 'We use cutting-edge technology and best practices to deliver high-performance, future-ready solutions.',
+        size: "30px" 
+   
+    },
+    {
+        id: 2,
+        img: Images.tailoredSolutions,
+        header: 'Tailored Solutions',
+        description: 'Every business is unique, and so are our solutions. We customize our software to align perfectly with your requirements and goals',
+        size: "30px" 
+    },
+    {
+        id: 3,
+        img: Images.robustSecurity,
+        header: 'Robust Security',
+        description: 'We prioritize data security and compliance, ensuring your software is protected against vulnerabilities and cyber threats.',
+        size: "20px" 
+    },
+    {
+        id: 4,
+        img: Images.seamless,
+        header: 'Seamless User Experience',
+        description: 'Intuitive, fast, and responsive—our software is designed with the end-user in mind for an exceptional digital experience.',
+        size: "20px" 
+    },
+    // {
+    //     id: 5,
+    //     img: Images.othersRocket,
+    //     header: 'On-Time Delivery',
+    //     description: 'Our agile development process ensures timely project completion without compromising on quality.',
+    // },
 ]
 
 export const OurCoreValueList = [
@@ -311,7 +352,7 @@ export const OurProductsHome = [
     },
     {
         id: 2,
-        projectName: "Finance/NBFC Application",
+        projectName: "Finance(NBFC) Application",
         description: 'Our NBFC software is a comprehensive solution designed to manage the end-to-end operations of Non-Banking Financial Companies. It streamlines loan management, customer onboarding, collections, compliance, and reporting processes. With automated workflows and real-time analytics, it enhances operational efficiency and ensures regulatory compliance. The software supports various loan products, including personal, vehicle, and business loans. Scalable and customizable, it caters to NBFCs of all sizes.',
         img: Images.financeProduct,
         details: [
@@ -376,6 +417,190 @@ export const OurProductsHome = [
         projectName: "Online Examination Application",
         description: 'Our online examination software is a secure and scalable platform for conducting exams anytime, anywhere. It supports a wide range of question formats, automated grading, and real-time monitoring. With customizable exam settings, and instant result generation, it ensures fairness and transparency. Ideal for schools, universities, training institutes, and corporate assessments. Easy to use and fully cloud-based, it simplifies exam management for both organizers and candidates.',
         img: Images.onlineExamProduct,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+]
+
+import RentalImg from '../../assets/images/projectImages/rentalImgProduct.webp'
+import KGFImg from '../../assets/images/projectImages/kgfImgProduct.webp'
+import GPSImg from '../../assets/images/projectImages/gpsImgProduct.webp'
+import FinanceImg from '../../assets/images/projectImages/financeImgProduct.webp'
+import FairImg from '../../assets/images/projectImages/fairImgProduct.webp'
+import ExamImg from '../../assets/images/projectImages/examImgProduct.webp'
+import BizstarterrImg from '../../assets/images/projectImages/bizstarterrImgProduct.webp'
+
+export const OurProductsHomeDup = [
+    {
+        id: 1,
+        projectName: "Rental Application",
+        description: 'All-in-one solution designed to streamline and automate rental business operations. It helps manage rental quotations, orders, delivery, return, Inventory, management, payments, and customer communication seamlessly. With real-time tracking and automated reminders, it reduces manual work and improves efficiency. The software supports businesses across industries, from equipment rentals to vehicle leasing. Easy to use and fully customizable, it adapts to your unique business needs.',
+        img: RentalImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 2,
+        projectName: "Finance(NBFC) Application",
+        description: 'Our NBFC software is a comprehensive solution designed to manage the end-to-end operations of Non-Banking Financial Companies. It streamlines loan management, customer onboarding, collections, compliance, and reporting processes. With automated workflows and real-time analytics, it enhances operational efficiency and ensures regulatory compliance. The software supports various loan products, including personal, vehicle, and business loans. Scalable and customizable, it caters to NBFCs of all sizes.',
+        img: FinanceImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 3,
+        projectName: "Bizstarterr",
+        description: 'Our US business registration service website offers a simple and fast way to register your business online. Whether you’re forming an LLC, Corporation, or Partnership, we guide you through every step. From filing documents to obtaining EIN and compliance support, we handle it all. Our platform ensures hassle-free registration with expert assistance and transparent pricing. Ideal for entrepreneurs, startups, and small businesses looking to launch in the US.',
+        img: BizstarterrImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 4,
+        projectName: "GPS/Fleet Management Application ",
+        description: 'Our GPS navigation and fleet management product offers real-time vehicle tracking, route optimization, and smart navigation in one powerful solution. It helps businesses monitor their fleets, reduce fuel costs, and improve delivery efficiency. With live location updates, geofencing, and performance reports, fleet management becomes seamless and data-driven. Ideal for logistics, transportation, and service industries, it ensures smarter, safer, and more efficient fleet operations.',
+        img: GPSImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 5,
+        projectName: "Inbound and Outbound Logistics Application ",
+        description: 'Our inbound and outbound logistics software streamlines the entire supply chain, from supplier deliveries to final product shipments. The software enhances visibility across all stages, ensuring smooth coordination between warehouses, transporters, and customers. With powerful reporting and analytics, businesses can optimize inventory flow and improve decision-making. Designed for manufacturers, distributors, and logistics providers, it ensures faster, smarter, and more cost-effective logistics management.',
+        img: KGFImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 6,
+        projectName: "Event Management Application",
+        description: 'Our event management software is an all-in-one solution to plan, manage, and execute events of any size with ease. It simplifies tasks like guest registration, ticketing, vendor coordination, and event promotion. With real-time updates, customizable workflows, and insightful analytics, it helps ensure seamless event execution. The software is perfect for conferences, corporate events, weddings, and exhibitions. User-friendly and cloud-based, it empowers event planners to stay organized and deliver unforgettable experiences.',
+        img: FairImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 7,
+        projectName: "Online Examination Application",
+        description: 'Our online examination software is a secure and scalable platform for conducting exams anytime, anywhere. It supports a wide range of question formats, automated grading, and real-time monitoring. With customizable exam settings, and instant result generation, it ensures fairness and transparency. Ideal for schools, universities, training institutes, and corporate assessments. Easy to use and fully cloud-based, it simplifies exam management for both organizers and candidates.',
+        img: ExamImg,
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+]
+
+
+
+export const OurProductsHomeDup2 = [
+    {
+        id: 1,
+        projectName: "Rental Application",
+        description: 'All-in-one solution designed to streamline and automate rental business operations. It helps manage rental quotations, orders, delivery, return, Inventory, management, payments, and customer communication seamlessly. With real-time tracking and automated reminders, it reduces manual work and improves efficiency. The software supports businesses across industries, from equipment rentals to vehicle leasing. Easy to use and fully customizable, it adapts to your unique business needs.',
+        img: "https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/604b9e73-a0bf-4014-9d94-6ca4d74abc85.png",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 2,
+        projectName: "Finance(NBFC) Application",
+        description: 'Our NBFC software is a comprehensive solution designed to manage the end-to-end operations of Non-Banking Financial Companies. It streamlines loan management, customer onboarding, collections, compliance, and reporting processes. With automated workflows and real-time analytics, it enhances operational efficiency and ensures regulatory compliance. The software supports various loan products, including personal, vehicle, and business loans. Scalable and customizable, it caters to NBFCs of all sizes.',
+        img: "https://th.bing.com/th/id/OIP._92ZzbpfkjvlqQbGRq3H-AHaFL?w=1000&h=700&rs=1&pid=ImgDetMain",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 3,
+        projectName: "Bizstarterr",
+        description: 'Our US business registration service website offers a simple and fast way to register your business online. Whether you’re forming an LLC, Corporation, or Partnership, we guide you through every step. From filing documents to obtaining EIN and compliance support, we handle it all. Our platform ensures hassle-free registration with expert assistance and transparent pricing. Ideal for entrepreneurs, startups, and small businesses looking to launch in the US.',
+        img: "https://apploye.com/blog/content/images/2023/09/apploye-time-tracker-dashboard.png",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 4,
+        projectName: "GPS/Fleet Management Application ",
+        description: 'Our GPS navigation and fleet management product offers real-time vehicle tracking, route optimization, and smart navigation in one powerful solution. It helps businesses monitor their fleets, reduce fuel costs, and improve delivery efficiency. With live location updates, geofencing, and performance reports, fleet management becomes seamless and data-driven. Ideal for logistics, transportation, and service industries, it ensures smarter, safer, and more efficient fleet operations.',
+        img: "https://i.pinimg.com/originals/05/5f/b1/055fb1392b4eab6fa84004cfa4298938.png",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 5,
+        projectName: "Inbound and Outbound Logistics Application ",
+        description: 'Our inbound and outbound logistics software streamlines the entire supply chain, from supplier deliveries to final product shipments. The software enhances visibility across all stages, ensuring smooth coordination between warehouses, transporters, and customers. With powerful reporting and analytics, businesses can optimize inventory flow and improve decision-making. Designed for manufacturers, distributors, and logistics providers, it ensures faster, smarter, and more cost-effective logistics management.',
+        img: "https://images.softwaresuggest.com/latest_screenshots/kuma_1.png",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 6,
+        projectName: "Event Management Application",
+        description: 'Our event management software is an all-in-one solution to plan, manage, and execute events of any size with ease. It simplifies tasks like guest registration, ticketing, vendor coordination, and event promotion. With real-time updates, customizable workflows, and insightful analytics, it helps ensure seamless event execution. The software is perfect for conferences, corporate events, weddings, and exhibitions. User-friendly and cloud-based, it empowers event planners to stay organized and deliver unforgettable experiences.',
+        img: "https://th.bing.com/th/id/OIP.1Maw5GqXhu379AOcyeJbMQHaEt?w=850&h=540&rs=1&pid=ImgDetMain",
+        details: [
+            "Cloud to help your business drive operational  ",
+            "Customer easily Understand",
+            "Customer easily Understand"
+
+        ]
+    },
+    {
+        id: 7,
+        projectName: "Online Examination Application",
+        description: 'Our online examination software is a secure and scalable platform for conducting exams anytime, anywhere. It supports a wide range of question formats, automated grading, and real-time monitoring. With customizable exam settings, and instant result generation, it ensures fairness and transparency. Ideal for schools, universities, training institutes, and corporate assessments. Easy to use and fully cloud-based, it simplifies exam management for both organizers and candidates.',
+        img: "https://th.bing.com/th/id/OIP.MEIM46UhwexTP-hU87Z57gHaDi?w=1000&h=477&rs=1&pid=ImgDetMain",
         details: [
             "Cloud to help your business drive operational  ",
             "Customer easily Understand",

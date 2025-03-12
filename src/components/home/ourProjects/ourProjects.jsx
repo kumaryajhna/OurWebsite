@@ -1,10 +1,12 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useState, useCallback, useRef, useEffect, lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Styles from './ourProjects.module.scss';
 import { useNavigate } from "react-router-dom";
 import { Paths } from '../../../browserRouter/paths/paths';
-import { OurProductsHome } from '../../../shared/utils/arrayData';
-import MobileProducts from './mobileProducts/mobileProducts';
+import { OurProductsHomeDup } from '../../../shared/utils/arrayData';
+
+// Lazy load the MobileProducts component
+const MobileProducts = lazy(() => import('./mobileProducts/mobileProducts'));
 
 const OurProjects = () => {
     const navigate = useNavigate();
@@ -14,13 +16,10 @@ const OurProjects = () => {
         { id: 1, label: "Rental Application " },
         { id: 2, label: "Finance(NBFC)  " },
         { id: 3, label: "Bizstarter " },
-        { id: 4, label: "GPS/Fleet Management  " },//Application
-        // { id: 5, label: "Inbound and outbound logistics application " },
-        { id: 5, label: "Logistics  " },//application
-
+        { id: 4, label: "GPS/Fleet Management  " },
+        { id: 5, label: "Logistics  " },
         { id: 6, label: "Event Management " },
         { id: 7, label: "Online Examination " },
-
     ];
 
     const [activeIndex, setActiveIndex] = useState(1);
@@ -40,7 +39,9 @@ const OurProjects = () => {
     }, []);
 
     const renderComponent = useCallback(() => {
-        const filteredProducts = OurProductsHome.filter(product => product.id === activeIndex);
+        if (!isVisible) return null; // Avoid unnecessary rendering when not visible
+
+        const filteredProducts = OurProductsHomeDup.filter(product => product.id === activeIndex);
         if (filteredProducts.length === 0) return <div>No products found for this tab.</div>;
 
         return (
@@ -55,7 +56,7 @@ const OurProjects = () => {
                     >
                         <h5>{product.projectName}</h5>
                         <p>{product.description}</p>
-                        <img src={product.img} alt={product.projectName} />
+                        <img src={product.img} alt={product.projectName} loading="lazy" />
                     </motion.div>
                 ))}
             </>
@@ -95,11 +96,16 @@ const OurProjects = () => {
                     {renderComponent()}
                 </motion.div>
             </div>
+
+            {/* Lazy Load Mobile Products */}
             <div className={Styles.containerMobileTabs}>
-                <MobileProducts />
+                <Suspense fallback={<div></div>}>
+                    <MobileProducts />
+                </Suspense>
             </div>
         </div>
     );
 };
 
 export default OurProjects;
+// Loading...

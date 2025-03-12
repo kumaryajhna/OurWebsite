@@ -13,14 +13,15 @@ const Header = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [open, setOpen] = useState(false);
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('#home'); // Default to Home
+
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState);
     };
-    const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
-        setActiveSection(location.hash);
+        setActiveSection(location.hash || '#home'); // Set Home active if no hash
     }, [location]);
 
     useEffect(() => {
@@ -32,13 +33,13 @@ const Header = () => {
                 const el = document.querySelector(section);
                 if (el) {
                     const rect = el.getBoundingClientRect();
-                    if (rect.top <= 80 && rect.bottom >= 80) {
+                    if (rect.top <= 80 && rect.bottom >= 70) {
                         foundSection = section;
                         break;
                     }
                 }
             }
-            setActiveSection(foundSection);
+            setActiveSection(foundSection || '#home'); // Default to Home if none found
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -56,23 +57,25 @@ const Header = () => {
                 open={isOpen}
                 onClose={toggleDrawer}
                 direction="right"
-                // className='bla bla bla'
                 style={{
-                    width: "50%", // Custom width
-                    zIndex: 1050, // Custom z-index
+                    width: "50%",
+                    zIndex: 1050,
                     height: "100%",
                 }}
             >
-                {/* <button onClick={toggleDrawer}>Close</button> */}
                 <SideDrawer onClose={toggleDrawer} />
             </Drawer>
+
             <div className={Styles.mainContainerHeader}>
                 <div className={Styles.containerHeader}>
-                    <img
-                        src={Images.pactLogo}
-                        className={Styles.imgLogo}
-                        onClick={() => handleNavClick(Paths.Home, '#home')}
-                    />
+                    <div>
+                        <img
+                            src={Images.pactLogo}
+                            className={Styles.imgLogo}
+                            onClick={() => handleNavClick(Paths.Home, '#home')}
+                            alt="Logo"
+                        />
+                    </div>
 
                     {!open && (
                         <div className={Styles.headerRight}>
@@ -109,7 +112,6 @@ const Header = () => {
                         </div>
                     )}
 
-
                     {!open && (
                         <div>
                             <div className={Styles.threeLines} onClick={toggleDrawer}>
@@ -135,3 +137,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+// 🔒

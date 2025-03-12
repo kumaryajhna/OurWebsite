@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './mobileProducts.module.scss';
 import { FiChevronDown } from 'react-icons/fi';
-import { OurProductsHome } from '../../../../shared/utils/arrayData';
+import { OurProductsHomeDup } from '../../../../shared/utils/arrayData';
 
 const MobileProducts = () => {
-  const [data, setData] = useState(OurProductsHome);
+  const [data, setData] = useState(OurProductsHomeDup);
   const itemsRef = useRef([]);
   const [visibleIndexes, setVisibleIndexes] = useState([]);
 

@@ -38,7 +38,7 @@ const ClientsIn = () => {
                         key={item.id} 
                         className={`${Styles.blockServices} ${animate ? Styles[`blockAnimate${index % 4}`] : ""}`}
                     >
-                        <img src={item.img} alt={item.header} />
+                        <img src={item.img} alt={item.header} loading="lazy" />
                         <h6>{item.header}</h6>
                     </div>
                 ))}

@@ -25,6 +25,9 @@
     /* X-offset | Y-offset | Blur-radius | Shadow-color */
 
 }
+.shadow {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 .imgLogo {
     width: 250px; // Default for large screens
@@ -48,12 +51,16 @@
 
 .link:hover {
     @include mixins.textLinear;
+    cursor: pointer;
+
 }
 
 .active {
     @include mixins.textLinear;
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
+
 }
 
 .headerRight {
@@ -110,12 +117,19 @@
 }
 
 @media (max-width: 480px) {
-    .imgLogo {
-        width: 165px;
-    }
+    // .imgLogo {
+    //     width: 1px;
+    // }
 
     .threeLines {
-        font-size: 30px;
+        font-size: 35px;
         margin: -5px 0 0 0;
     }
 }
+
+@media (max-width: 400px) {
+    .containerHeader {
+        padding: 10px;
+
+    }
+    }

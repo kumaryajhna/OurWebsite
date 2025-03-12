@@ -8,14 +8,32 @@ import { Images } from '../../../../../shared/utils/images'
 import { IoMdCloudOutline } from "react-icons/io";
 import { SlGlobe } from "react-icons/sl";
 import UseScrollToTop from '../../../../../shared/hooks/useScrollToTop'
+import { Helmet } from "react-helmet";
+import { Paths } from '../../../../../browserRouter/paths/paths'
 
 const SoftwareDominates = () => {
-  UseScrollToTop()
-    
+    UseScrollToTop()
+
     const [open, setOpen] = useState(false);
     const [openMobile, setOpenMobile] = useState(false);
     return (
         <>
+
+            <Helmet>
+                <title>Cloud-First Software Dominates: Why Businesses are Moving to the Cloud in 2025</title>
+                <meta
+                    name="description"
+                    content="Explore why cloud-first software is the future of business technology. Learn about its benefits, cost savings, scalability, and security compared to on-premise solutions."
+                />
+                <meta
+                    name="keywords"
+                    content="Cloud-First Software, Cloud Computing 2025, Cloud Migration Strategy, Business Cloud Solutions, Cloud-Based Software, Cloud vs On-Premise Software, Future of Cloud Computing, Benefits of Cloud-First Approach, SaaS vs On-Premise, Cloud-First Strategy for Businesses"
+                />
+                <meta name="author" content="Pacteazy" />
+                <meta name="publisher" content="Pacteazy" />
+                <link rel="canonical" href={Paths.SoftwareDominates} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className={Styles.containerSoftwareDominatesMain}>
                 <div className={Styles.containerSoftwareDominates}>
                     <h2>Cloud-First Software Dominates : Why Businesses are Moving to the Cloud in 2025</h2>

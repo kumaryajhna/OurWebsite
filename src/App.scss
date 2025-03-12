@@ -1,4 +1,4 @@
-@use './styles/variables.scss'as variables;
+@use './styles/variables.scss' as variables;
 
 
 
@@ -12,4 +12,11 @@
 .outlet {
     position: relative;
     top: 85px;
+}
+
+@media (max-width: 500px) {
+    .plogo {
+        width: 100px;
+    }
+
 }

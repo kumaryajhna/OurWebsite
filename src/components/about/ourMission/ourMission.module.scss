@@ -114,7 +114,7 @@
     color: variables.$third-color;
     font-size: variables.$body_font;
     letter-spacing: 0.5px;
-    line-height: 26px;
+    line-height: 28px;
 }
 
 .missionVision {
@@ -192,21 +192,33 @@
         transition: all 1s ease-out;
         // margin: -30px 0 0 0;
     }
+    .containerOurMissionRight,
+    .containerOurMissionLeft {
+        transition: none;
+        opacity: 1;
+        
+    }
+    .containerOurMissionRight div {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        line-height: 25px;
 
+    }
     .containerOurMission {
         margin: 50px 0px;
     }
 }
 
 @media (max-width: 450px) {
-.containerOurMissionRight ,
-    .containerOurMissionLeft
-    {
-    transition: none;
-    transform: translateY(0);
-    opacity: 1;
 
-}
+    .containerOurMissionRight,
+    .containerOurMissionLeft {
+        transition: none;
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+
     .ourMissionText h2 {
         font-size: 22px;
 

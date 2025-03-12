@@ -8,14 +8,31 @@ import { Images } from '../../../../../shared/utils/images'
 import { IoMdCloudOutline } from "react-icons/io";
 import { SlGlobe } from "react-icons/sl";
 import UseScrollToTop from '../../../../../shared/hooks/useScrollToTop'
+import { Paths } from '../../../../../browserRouter/paths/paths'
+import { Helmet } from 'react-helmet';
 
 const AiAutomation = () => {
-  UseScrollToTop()
-    
+    UseScrollToTop()
+
     const [open, setOpen] = useState(false);
     const [openMobile, setOpenMobile] = useState(false);
     return (
         <>
+            <Helmet>
+                <title>How AI and Automation are Transforming Software Development</title>
+                <meta
+                    name="description"
+                    content="Discover how AI and automation are revolutionizing software development, accelerating coding, enhancing security, optimizing CI/CD pipelines, and improving project management."
+                />
+                <meta
+                    name="keywords"
+                    content="AI in Software Development, AI Automation, AI in Coding, AI Testing, Automated Bug Detection, Intelligent Project Management, CI/CD Automation, DevOps AI, AI Security, Cloud Software, AI Code Generation, Software Engineering Automation"
+                />
+                <meta name="author" content="Pacteazy" />
+                <meta name="publisher" content="Pacteazy" />
+                <link rel="canonical" href={Paths.AiAutomation} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className={Styles.containerSoftwareDominatesMain}>
                 <div className={Styles.containerSoftwareDominates}>
                     <h2>How AI and Automation are Transforming Software Development</h2>

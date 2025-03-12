@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Styles from "./contentImgAnimate.module.scss";
 import { Images } from '../../../../shared/utils/images';
-import FigmaIcon3D from '../../../../assets/images/home/homeIcon/figmaIcon3D';
-import JavaScriptIcon3D from '../../../../assets/images/home/homeIcon/javaScriptIcon3D';
-import TypeScriptIcon3D from '../../../../assets/images/home/homeIcon/typeScriptIcon3D';
-import AngularIcon3D from '../../../../assets/images/home/homeIcon/angularIcon3D';
-import CssIcon3D from '../../../../assets/images/home/homeIcon/cssIcon3D';
-import ReactIcon3D from '../../../../assets/images/home/homeIcon/reactIcon3D';
-import NodeJSIcon3D from '../../../../assets/images/home/homeIcon/nodeJSIcon3D';
 
 const ContentImgAnimate = () => {
     const initialImages = [Images.simpleImg2, Images.simpleImg3, Images.simpleImg4, Images.simpleImg];

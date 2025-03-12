@@ -1,0 +1,170 @@
+@use '../../../styles/variables.scss' as variables;
+@use '../../../styles/mixins.scss' as mixins;
+
+.containerHomeChoose {
+    display: flex;
+    padding: 30px 80px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    max-width: 1500px;
+}
+
+.containerHomeChoose h3 {
+    @include mixins.textLinear;
+    @include mixins.flex;
+    font-weight: 700;
+    font-size: variables.$header-font;
+    justify-content: center;
+    gap: 5px;
+    margin: 0px 0 40px 0;
+}
+
+.btnArrow {
+    margin: 20px 0px;
+    @include mixins.btn;
+    padding: 6px 25px 10px 25px;
+    width: auto;
+}
+
+.chooseUsLeft {
+    width: 890px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chooseUsBlock {
+    display: flex;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.chooseUsImg {
+    width: 270px;
+    margin: 0 0 0 -40px;
+}
+
+.chooseLoop {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blockServices {
+    display: flex;
+    max-width: 760px;
+    gap: 20px;
+}
+
+.blockServicesHeder {
+    font-weight: 600;
+    font-size: 17.5px;
+    color: variables.$primary-color;
+}
+
+.blockServicesRight p {
+    color: variables.$third-color;
+    font-size: variables.$body_font;
+
+}
+
+.chooseUsBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px
+}
+
+
+.btnAppointment {
+    @include mixins.btn;
+    padding: 10px 20px;
+    margin: 0 0 0 15px
+}
+
+.btnAppointmentMobile {
+    @include mixins.btn;
+    padding: 10px 20px;
+    display: none;
+    margin: 0 0 0 15px
+}
+
+
+@media (max-width: 1200px) {
+    .containerHomeChoose {
+        padding: 30px 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .containerHomeChoose {
+        padding: 30px 30px;
+    }
+
+    .chooseUsImg {
+        width: 230px;
+        margin: 0 ;
+    }
+
+    .chooseUsLeft {
+        width: 620px;
+    }
+}
+@media (max-width: 1100px) {
+    .btnAppointmentMobile {
+        @include mixins.btn;
+        padding: 10px 20px;
+        display: block;
+    }
+    .btnAppointment {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .chooseUsImg {
+        width: 200px;
+    }
+
+    .chooseUsLeft {
+        width: 520px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .chooseUsLeft {
+        width: auto;
+    }
+
+    .chooseUsBlock {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .chooseUsBottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .containerHomeChoose {
+        padding: 30px 10px;
+    }
+    .containerHomeChoose h3 {
+        font-size: 28px;
+    }
+    .chooseUsImg {
+        width: 50%;
+        height: auto;
+    }
+}

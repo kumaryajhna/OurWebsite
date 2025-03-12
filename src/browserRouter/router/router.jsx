@@ -22,12 +22,12 @@ const RouterComponent = () => {
 
       <Routes>
         <Route path={Paths.Home} element={<Home />} />
-        <Route path={Paths.About} element={<About />} />
+        {/* <Route path={Paths.About} element={<About />} />
         <Route path={Paths.Products} element={<Products />} />
         <Route path={Paths.Services} element={<Services />} />
         <Route path={Paths.Blogs} element={<Blogs />} />
         <Route path={Paths.Contactus} element={<ContactUs />} />
-        <Route path={Paths.BookanAppointment} element={<BookanAppointment />} />
+        <Route path={Paths.BookanAppointment} element={<BookanAppointment />} /> */}
         
         <Route path={Paths.SoftwareDominates} element={<SoftwareDominates />} />
         <Route path={Paths.SoftwareDevelopment} element={<SoftwareDevelopment />} />

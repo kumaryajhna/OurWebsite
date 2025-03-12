@@ -12,11 +12,16 @@ const Footer = () => {
     navigate(Paths.Contactus)
   }
   const navigationLinks = [
-    { name: 'About', path: Paths.About },
-    { name: 'Contact', path: Paths.Contactus },
-    { name: 'Blogs', path: Paths.Blogs },
-    { name: 'Products', path: Paths.Products },
+    { name: 'Home', path: Paths.About },
+    { name: 'About', path: Paths.Contactus },
+    { name: 'Service', path: Paths.Blogs },
+    // { name: 'Products', path: Paths.Products },
   ];
+
+  const handleNavClick = (path, hash) => {
+    navigate(path + hash);
+    setActiveSection(hash);
+  };
   return (
     <>
       <div className={Styles.containerFooter}>
@@ -26,56 +31,55 @@ const Footer = () => {
               <img src={Images.pactLogo} className={Styles.bottomImg} />
               <div className={Styles.detailInfo}>
                 <div className={Styles.iconText}>
-                  <BiSolidPhoneCall color='#1C98CB' size={20} style={{margin:'2px 0 0 0'}} />
+                  <BiSolidPhoneCall color='#1C98CB' size={20} style={{ margin: '3px 0 0 0' }} />
                   <div>
-                    <div style={{letterSpacing:'2.5px',color:'#1b1464'}}>+91 8222822115</div>
-                    <div style={{letterSpacing:'2.5px',color:'#1b1464'}}>+91 8222822116</div>
+                    <div style={{ letterSpacing: '2.5px', color: '#1b1464' }}>+91 8222822115</div>
+                    <div style={{ letterSpacing: '2.5px', color: '#1b1464' }}>+91 8222822116</div>
                   </div>
                   {/* <span>+91 8222822115</span> */}
                 </div>
                 <div className={Styles.iconText}>
-                  <IoMailSharp color='#1C98CB' size={20} />
+                  <IoMailSharp color='#1C98CB' size={20} style={{ margin: '3px 0 0 0' }} />
                   <span>contact@pacteazy.com</span>
                 </div>
                 <div className={Styles.iconText}>
-                  <MdLocationPin color='#1C98CB' size={20} />
+                  <MdLocationPin color='#1C98CB' size={20} style={{ margin: '3px 0 0 0' }} />
                   {/* <span>132 Dartmouth Street Boston, Massachusetts 02156 United States</span> */}
                   <span>Arundathi Nagar, Vizianagaram 535003, Andhra Pradesh, India</span>
                 </div>
               </div>
             </div>
             <div className={Styles.listNav}>
-              <h6>Company</h6>
-              {/* <div>
-                <span onClick={navigateAbout}>About</span>
-                <span onClick={navigateContact}>Contact</span>
-                <span onClick={navigateBlogs}>Blogs</span>
-                <span onClick={navigateProducts}>Products</span>
-              </div> */}
+              <h6>Quick Links</h6>
               <div>
+                <span onClick={() => handleNavClick(Paths.Home, '#home')}>Home</span>
+                <span onClick={() => handleNavClick(Paths.Home, '#about')}>About Us</span>
+                <span onClick={() => handleNavClick(Paths.Home, '#services')}>Services</span>
+              </div>
+              {/* <div>
                 {navigationLinks.map(({ name, path }) => (
                   <span key={name}
                   // onClick={() => navigate(path)}
                   >{name}</span>
                 ))}
-              </div>
+              </div> */}
             </div>
             <div className={Styles.listNav}>
-              <h6>Legal</h6>
+              <h6></h6>
               <div>
-                <span>Privacy Policy</span>
-                <span>Terms & Services</span>
-                <span>Terms of Use</span>
+                <span onClick={() => handleNavClick(Paths.Home, '#projects')} style={{ margin: '20px 0 0 0 ' }}>Products</span>
+                <span onClick={() => handleNavClick(Paths.Home, '#blogs')}>Blogs</span>
+                {/* <span>Terms of Use</span> */}
               </div>
             </div>
-            <div className={Styles.listNav}>
-              <h6>Quick Links</h6>
+            {/* <div className={Styles.listNav}>
+              <h6></h6>
               <div>
                 <span>Techlabz Keybox</span>
                 <span>Downloads</span>
                 <span>Forum</span>
               </div>
-            </div>
+            </div> */}
             <div className={Styles.cardInfo}>
               <div className={Styles.card}>
                 <h6>Join Our Newsletter</h6>

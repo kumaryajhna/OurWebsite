@@ -61,6 +61,15 @@ button small {
 
 }
 
+@keyframes moveBackground {
+    0% {
+        background-position: 45% center;
+    }
+    100% {
+        background-position: 50% center;
+    }
+}
+
 .companyInfo {
     padding: 25px 50px 15px 50px;
     @include mixins.flex;
@@ -68,8 +77,14 @@ button small {
     flex-direction: column;
     gap: 30px;
     font-size: variables.$body_font;
-
+    background-image: url("https://th.bing.com/th/id/OIP.-cz_Fv9r9RlpxnXPvv2S4wHaEK?w=612&h=344&rs=1&pid=ImgDetMain");
+    background-repeat: no-repeat;
+    background-size: contain; // Adjust based on requirement
+    background-position: -100% center;
+    
+    animation: moveBackground 5s linear infinite alternate;
 }
+
 
 .textCopyRights {
     color: variables.$primary-color ;

@@ -43,7 +43,7 @@
     align-items: center;
     // text-align: center;
     width: 320px !important;
-    height: 380px;
+    height: 390px;
     gap: 20px;
     background-color: #fff;
     border: .1px solid transparent;
@@ -74,8 +74,8 @@
 
 .srvImg {
     background: linear-gradient(180deg, #1C98CB 0%, #1B1464 100%);
-    width: 45px;
-    height: 45px;
+    // width: 45px;
+    // height: 45px;
     @include mixins.flex;
     border-radius: 50%;
     justify-content: center;

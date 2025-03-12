@@ -1,0 +1,36 @@
+.scene {
+    width: 30px;
+    height: 30px;
+    perspective: 600px;
+    margin: auto;
+  }
+  
+  .cube {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .face {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem; /* Adjust icon size */
+    color: #fff;
+    border: none;
+    background-color: #fff;
+  }
+  
+  /* Adjusting translateZ to half the cube size (15px) */
+  .front  { transform: rotateY(  0deg) translateZ(15px); }
+  .back   { transform: rotateY(180deg) translateZ(15px); }
+  .left   { transform: rotateY(-90deg) translateZ(15px); }
+  .right  { transform: rotateY( 90deg) translateZ(15px); }
+  .top    { transform: rotateX( 90deg) translateZ(15px); }
+  .bottom { transform: rotateX(-90deg) translateZ(15px); }
+  

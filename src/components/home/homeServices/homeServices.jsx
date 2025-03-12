@@ -4,6 +4,8 @@ import { Paths } from "../../../browserRouter/paths/paths";
 import { useNavigate } from "react-router-dom";
 import { OurHomeList } from "../../../shared/utils/arrayData";
 
+
+
 const HomeServices = () => {
     const navigate = useNavigate();
     const servicesRef = useRef([]);
@@ -37,6 +39,8 @@ const HomeServices = () => {
     return (
         <div className={Styles.containerHomeSev}>
             <h3><span> Our</span> Services </h3>
+            {/* <img src={GifMarketing} alt="Laptop Animation"  style={{width:'100px'}} /> */}
+            {/* <AnimatedIcon/> */}
             <div className={Styles.ourServices}>
                 {OurHomeList.map((item, index) => (
                     <div
@@ -52,7 +56,9 @@ const HomeServices = () => {
                             }`}
                     >
                         <div className={Styles.srvImg}>
-                            <img src={item.img} alt={item.header} />
+                            <img src={item.img} alt={item.header} style={{ width: '70px' }}  />
+                            {/* <img src={GifMarketing} alt="Laptop Animation" style={{ width: '100px' }} /> */}
+
                         </div>
                         {/* <>🏢 </> */}
                         <h6 className={Styles.blockServicesHeder}>{item.header}</h6>
