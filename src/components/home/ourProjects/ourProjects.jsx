@@ -4,6 +4,7 @@ import Styles from './ourProjects.module.scss';
 import { useNavigate } from "react-router-dom";
 import { Paths } from '../../../browserRouter/paths/paths';
 import { OurProductsHomeDup } from '../../../shared/utils/arrayData';
+import { Helmet } from 'react-helmet';
 
 // Lazy load the MobileProducts component
 const MobileProducts = lazy(() => import('./mobileProducts/mobileProducts'));
@@ -57,6 +58,10 @@ const OurProjects = () => {
                         <h5>{product.projectName}</h5>
                         <p>{product.description}</p>
                         <img src={product.img} alt={product.projectName} loading="lazy" />
+                        {/* <img src={product.img} alt={product.projectName} loading="lazy" /> */}
+                        {/* <Helmet>
+                            <link rel="preload" as="image" href={product.img} />
+                        </Helmet> */}
                     </motion.div>
                 ))}
             </>

@@ -18,7 +18,7 @@ const Header = () => {
 
     const toggleDrawer = () => {
         setIsOpen((prevState) => !prevState);
-    };
+    }
 
     useEffect(() => {
         setActiveSection(location.hash || '#home'); // Set Home active if no hash
